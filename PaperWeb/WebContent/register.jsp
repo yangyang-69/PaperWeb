@@ -35,7 +35,7 @@
 	<div id="b">
 		<form name="form3" action="registercall.jsp" method="post">
 			姓名：<input type ="text" name="UserName" class="a"><br>
-			密码：<input type ="text" name="password" class="a"><br>
+			密码：<input type ="password" name="password" class="a"><br>
 			单位：<input type ="text" name="UserOrganization" class="a"><br>
 		<input type ="button" value="注册" onClick="yanzheng2()"><br>
 		</form>
