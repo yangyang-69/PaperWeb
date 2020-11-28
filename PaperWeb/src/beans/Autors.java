@@ -1,20 +1,20 @@
 package beans;
 
 public class Autors {
-	private int AutorID;
-	private String AutorName;
+	private int AuthorID;
+	private String AuthorName;
 	private String Organization;
-	public int getAutorID() {
-		return AutorID;
+	public int getAuthorID() {
+		return AuthorID;
 	}
-	public void setAutorID(int autorID) {
-		AutorID = autorID;
+	public void setAuthorID(int authorID) {
+		AuthorID = authorID;
 	}
-	public String getAutorName() {
-		return AutorName;
+	public String getAuthorName() {
+		return AuthorName;
 	}
-	public void setAutorName(String autorName) {
-		AutorName = autorName;
+	public void setAuthorName(String authorName) {
+		AuthorName = authorName;
 	}
 	public String getOrganization() {
 		return Organization;
