@@ -8,6 +8,19 @@
 		<meta name="description" content="论文网-论文发表">
 		<link rel="stylesheet" href="css/base.css">
 		<link rel="stylesheet" href="css/pgzg.css">
+		<script type="text/javascript">
+		function yanzheng3(){
+			if(subpaper_form1.Title.value == "" ||subpaper_form1.Summary.value ==""
+					||subpaper_form1.Source.value=="" ||subpaper_form1.Minority.value=="" ){
+				alert("任意选项不能为空,请重新填写");
+				return false;
+			}
+			else{
+				subpaper_form1.submit();
+				return true;
+			}
+		}
+</script>
 </head>
 <body>
 	<div class="w-all top">
@@ -46,69 +59,28 @@
 		<div class="w-all bannertu" style="background: url(img/bg04.png) no-repeat center;background-size: 100% 100%;"></div>
 		<div class="w-all">
 			<div class="w-main">
-				<div class="goodsxxfl fl">
-					<dl>
-						<dt class="fs-16">产品中心</dt>
-						<dd class="fs-14"><a href="">A类产品</a></dd>
-						<dd class="fs-14"><a href="">B类产品</a></dd>
-						<dd class="fs-14"><a href="">B类产品</a></dd>
-						<dd class="fs-14"><a href="">B类产品</a></dd>
-						<dd class="fs-14"><a href="">B类产品</a></dd>
-						<dd class="fs-14"><a href="">B类产品</a></dd>
-						
-						<dd class="fs-14"><a href="" class="change">C类产品</a></dd>
-					</dl>
-				</div>
 				<div class="goodsxxfr fr">
 					<div class="nagelj">
 						当前位置：<a href="">首页></a>
 						<a href="">论文发表></a>
 					</div>
-					<div class="goodslist">
-						<ul>
-							<li>
-								<a href="">
-								<img  src="img/chanp01.png" alt=""/>
-								
-								<div class="hoverimg">
-									<img src="img/fangdalogo.png" alt=""/>
-								</div>
-								<p class="one_hidden">产品</p>
-								</a>
-							</li>
-							<li>
-								<a href="">
-								<img  src="img/chanp01.png" alt=""/>
-								<div class="hoverimg">
-									<img src="img/fangdalogo.png" alt=""/>
-								</div>
-								<p>产品</p>
-								</a>
-							</li>
-							<li>
-								<a href="">
-								<img  src="img/chanp01.png" alt=""/>
-								<div class="hoverimg">
-									<img src="img/fangdalogo.png" alt=""/>
-								</div>
-								<p>产品</p>
-								</a>
-							</li>
-						</ul>
-					</div>
-					<div class="clear"></div>
-					<div class="article_page_box">
-						<div class="page">
-							<a href="#">1</a>
-							<a href="#">2</a>
-							<a class="on" href="#">3</a>
-						</div>
-					</div>
 				</div>
-			</div>
+					<%
+						request.setCharacterEncoding("UTF-8");//保证中文编码
+						String UserName = (String)session.getAttribute("USERNAME");
+						System.out.println("paper.jsp+"+UserName);
+					%>
+					<form name="subpaper_form1" action="" method="post">
+				        论文标题：<input type="text" name="Title" /><br>
+				        摘要：<input type="text" name="Summary"/><br>
+				        期刊：<input type="text" name="Source"/><br>
+				        民族：<input type="text" name="Minority"/><br>
+				        <input type="submit" value="提交论文" onClick="return yanzheng3()"/><br>
+		    		</form>
+				</div>
 		</div>
 		<div class="clear"></div>
-		<div class="h-30"></div>
+		
 		<!--footer-->
 		<div class="clear"></div>
 		<div class="w-all banquan">

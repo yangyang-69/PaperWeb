@@ -12,13 +12,22 @@
 		<script type="text/javascript" src="js/jquery-1.12.1.min.js" ></script>
 		<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js" ></script>
 		<script type="text/javascript" src="js/tab.js" ></script>
+				<script type="text/javascript">
+		function setsesion1(){
+			response.sendRedirect("paper.jsp"); 
+			return true;
+		}
+</script>
 </head>
 <body>
 	<%
 		request.setCharacterEncoding("UTF-8");//保证中文编码
 		String UserName = request.getParameter("UserName");
-		System.out.println(UserName);
+		System.out.println("index.jsp+"+UserName);
+		session.setAttribute("USERNAME",UserName);  
+	    //response.sendRedirect("paper.jsp"); 
 	%>
+	
 	<div class="w-all top">
 			<div class="w-main">
 					<a href="" class="toplogoa fl">
@@ -75,7 +84,7 @@
 						<a href="">作者信息</a>
 					</li>
 					<li>
-						<a href="">论文发表</a>
+						<a href="paper.jsp" onClick="setsesion1()">论文发表</a>
 					</li>
 					<li>
 						<a href="">搜索</a>
