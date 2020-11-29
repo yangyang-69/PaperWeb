@@ -3,18 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>请授权</title>
-<style>
-	.a{
-	width:150px;
-	height:20px;
-	}
-	#b{
-	width:700px;
-	text-align:right;
-	}
-</style>
+	<meta charset="UTF-8">
+	<title>请授权</title>
+	<link rel="stylesheet" type="text/css" href="css/TransparentLoginBoxDemo.css">
+
 </head>
 <script type="text/javascript">
 	function yanzheng1(){
@@ -29,19 +21,32 @@
 	}
 </script>
 <body>
-	<h2 align="center">
-		请授权您的身份<br>
-	</h2>
-	<div id="b">
-		<form name="form1" action="usercheck.jsp" method="post">
-			账号：<input type ="text" name="UserName" class="a"><br>
-			密码：<input type ="password" name="password" class="a"><br>
-		<input type ="button" value="登录" onClick="yanzheng1()"><br>
-		</form>
-		<form name="form2" action="register.jsp" method="post">
-		没有账号？
-		<input type ="submit" value="注册">
-		</form>
-	</div>
+
+		<img src="img/bg5.jpg" />
+		<div id="login_id">
+		    <h1>中国民族论文信息网</h1>
+		    <form id="login_form" name="form1" action="usercheck.jsp" method="post">
+		        <input type ="text" name="UserName" class="loginuser"    placeholder="用户名"   />
+		        <input name="password" type="password" class="loginpwd"   placeholder="密码"  />
+		        <input id="login" type="button" class="loginbtn" value="登录" onClick="yanzheng1()" />
+		        
+		    </form>
+		    <form id="login_form1" name="form2" action="register.jsp" method="post">
+		    
+		    	<nobr id="zh">没有账号？</nobr>
+				<input type ="submit" class="loginbtn" value="注册">
+			</form>
+		</div>
+		<div id="buttom_id">
+   		<h5>版权所有:哈哈哈小组</h5>
+		</div>
+		
+
+
+
+
+	
+	
+	
 </body>
 </html>

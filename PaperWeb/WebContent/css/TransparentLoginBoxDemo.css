@@ -1,0 +1,103 @@
+
+body {
+    text-align: center;
+    margin: 0;
+}
+img {
+    width:100% ;height:100%;position:absolute;top:0;left:0;right:100;bottom:500;z-index:-1 ;
+    filter:alpha(opacity=80);
+    -moz1opacity:0.8;
+    opacity:0.8;
+}
+
+h1   {
+    color: #585556;
+    font-family:'SimHei' ;
+}
+h2  {
+    color: #585556;
+    font-family:'SimHei' ;
+}
+a {
+    color: #a25430;
+    text-decoration:none;
+}
+a:hover {
+    color: rosybrown;
+    text-decoration:underline;
+}
+#zh{
+	color: #585556;
+	font-size: 15pt
+	
+}
+
+
+#login_id {
+    width:600px;
+    height:300px;
+    margin: 0 auto;
+    margin-top: 150px;
+}
+
+#login_form {
+    vertical-align: middle;
+    margin-top: 60px;
+}
+#login_form1{
+    vertical-align: middle;
+    margin-top: 30px;
+}
+#login_form2{
+    vertical-align: middle;
+}
+#login_form input {
+    border: 0;
+    BACKGROUND-COLOR: transparent;
+    BORDER-BOTTOM: #585556 1px solid;
+    BORDER-LEFT: #585556 1px solid;
+    COLOR: #585556;
+    HEIGHT: 30px;
+    font-size: 14pt
+}
+#login_form .loginbtn {
+    BORDER-RIGHT: #585556 1px solid;
+    BORDER-TOP: #585556 1px solid;
+    height: 30px;
+}
+#login_form1 input {
+    border: 0;
+    BACKGROUND-COLOR: transparent;
+    BORDER-BOTTOM: #585556 1px solid;
+    BORDER-LEFT: #585556 1px solid;
+    COLOR: #585556;
+    HEIGHT: 30px;
+    font-size: 14pt
+}
+#login_form1 .loginbtn {
+    BORDER-RIGHT: #585556 1px solid;
+    BORDER-TOP: #585556 1px solid;
+    height: 30px;
+}
+
+#login_form2 input {
+    border: 0;
+    margin-top: 30px;
+    BACKGROUND-COLOR: transparent;
+    BORDER-BOTTOM: #585556 1px solid;
+    BORDER-LEFT: #585556 1px solid;
+    COLOR: #585556;
+    HEIGHT: 30px;
+    font-size: 14pt
+}
+#login_form2 .loginbtn {
+    BORDER-RIGHT: #585556 1px solid;
+    BORDER-TOP: #585556 1px solid;
+    height: 30px;
+}
+
+#buttom_id {
+    color: #585556;
+    height:50px; position:absolute; bottom:0; width:100%;
+    font-size: 10pt
+}

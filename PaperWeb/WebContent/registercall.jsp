@@ -1,12 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import="java.sql.*" %>
-<%@ page import="beans.Users" %>>
-<%@ page import="daos.UserDao" %>>
+<%@ page import="beans.Users" %>
+<%@ page import="daos.UserDao" %>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>注册结果</title>
+	<meta charset="UTF-8">
+	<title>注册结果</title>
+	<link rel="stylesheet" type="text/css" href="css/TransparentLoginBoxDemo.css">
+	
 </head>
 <body>
 <%
@@ -19,10 +21,20 @@
 		System.out.println(password);
 		System.out.println(UserOrganization);
 		Users user = userdao.RegisterinDB(UserName,password,UserOrganization);
-		out.print("注册成功"+UserName);
-		%>
-			请您<a href="hello.jsp">返回登录</a> 
-		<%
+		//out.print("注册成功"+UserName);
 %>
+
+		
+		
+	<img src="img/bg5.jpg"/>
+	<div id="login_id">
+		    <h2>注册成功，请您<a href="hello.jsp">返回登录</a> </h2>
+		
+	</div>
+	<div id="buttom_id">
+   		<h5>版权所有:哈哈哈小组</h5>
+	</div>	
+	
+		
 </body>
 </html>

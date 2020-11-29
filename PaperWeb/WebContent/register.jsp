@@ -3,18 +3,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>请注册</title>
-<style>
-	.a{
-	width:150px;
-	height:20px;
-	}
-	#b{
-	width:700px;
-	text-align:right;
-	}
-</style>
+	<meta charset="UTF-8">
+	<title>请注册</title>
+	<link rel="stylesheet" type="text/css" href="css/TransparentLoginBoxDemo.css">
+	
+
 </head>
 <script type="text/javascript">
 	function yanzheng2(){
@@ -29,16 +22,20 @@
 	}
 </script>
 <body>
-	<h2 align="center">
-		请注册<br>
-	</h2>
-	<div id="b">
-		<form name="form3" action="registercall.jsp" method="post">
-			姓名：<input type ="text" name="UserName" class="a"><br>
-			密码：<input type ="password" name="password" class="a"><br>
-			单位：<input type ="text" name="UserOrganization" class="a"><br>
-		<input type ="button" value="注册" onClick="yanzheng2()"><br>
-		</form>
-	</div>
+		<img src="img/bg5.jpg" />
+		<div id="login_id">
+		    <h1>请注册</h1>
+		    <form id="login_form2" name="form3" action="registercall.jsp" method="post">
+		        <input type ="text" name="UserName" class="loginuser"    placeholder="姓名"   /><br>
+		        <input name="password" type="password" class="loginpwd"   placeholder="密码"  /><br>
+		       	<input name="UserOrganization" type="text" class="loginuser"   placeholder="单位"  /><br>      
+		        <input id="login" type="button" class="loginbtn" value="注册" onClick="yanzheng2()"/>
+		    </form>
+		</div>
+		<div id="buttom_id">
+   		<h5>版权所有:哈哈哈小组</h5>
+		</div>
+
+	
 </body>
 </html>
