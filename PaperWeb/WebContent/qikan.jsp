@@ -1,15 +1,16 @@
-	<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <html>
-	<head>
+<head>
 		<meta charset="utf-8" />
-		<title>论文网-作者简介</title>
-		<meta name="keywords" content="论文网-作者简介">
-		<meta name="description" content="论文网-作者简介">
+		<title>论文网-期刊信息</title>
+		<meta name="keywords" content="论文网-期刊信息">
+		<meta name="description" content="论文网-期刊信息">
 		<link rel="stylesheet" href="css/base.css">
 		<link rel="stylesheet" href="css/pgzg.css">
-	</head>
-	<body>
-		<div class="w-all top">
+</head>
+<body>
+	<div class="w-all top">
 			<div class="w-main">
 					<a href="" class="toplogoa fl">
 						<img src="img/toplogo.png" alt="" />
@@ -26,10 +27,10 @@
 					<li>
 						<a href="">民族知识投递</a>
 					</li>
-					<li>
+					<li class="on">
 						<a href="">期刊信息</a>
 					</li>
-					<li class="on">
+					<li>
 						<a href="">作者简介</a>
 					</li>
 					<li>
@@ -42,7 +43,7 @@
 			</div>
 		</div>
 		<div class="clear"></div>
-		<div class="w-all bannertu" style="background: url(img/bg03.png) no-repeat center;background-size: 100% 100%;"></div>
+		<div class="w-all bannertu" style="background: url(img/bg05.png) no-repeat center;background-size: 100% 100%;"></div>
 		<div class="w-all">
 			<div class="w-main">
 				<div class="goodsxxfl fl">
@@ -61,7 +62,7 @@
 				<div class="goodsxxfr fr">
 					<div class="nagelj">
 						当前位置：<a href="">首页></a>
-						<a href="">作者简介></a>
+						<a href="">期刊信息></a>
 					</div>
 					<div class="goodslist">
 						<ul>
@@ -113,5 +114,5 @@
 		<div class="w-all banquan">
 			<p>版权所有    哈哈哈小组</p>
 		</div>
-	</body>
+</body>
 </html>
