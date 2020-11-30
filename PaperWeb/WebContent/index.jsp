@@ -20,28 +20,35 @@
 </script>
 </head>
 <body>
-	<%
-		request.setCharacterEncoding("UTF-8");//保证中文编码
-		String UserName = request.getParameter("UserName");
-		System.out.println("index.jsp+"+UserName);
-		session.setAttribute("USERNAME",UserName);  
-	    //response.sendRedirect("paper.jsp"); 
-	%>
 	
 	<div class="w-all top">
 			<div class="w-main">
 					<a href="" class="toplogoa fl">
+						<img src="img/toplogo1.png" alt="" />
 						<img src="img/toplogo.png" alt="" />
 					</a>
-					<!-- 
-					<div class="f1 yxnwtop">
+					
+					
+					<div class="fr yxnwtop">
 						<a href="">
-							<p class="fs-12 fc-1 fl">登陆</p>
-						</a>
-						<a href="">
-							<p class="fs-12 fc-1 fl">注册</p>
+													
+							<p class="fs-15 fc-2 fl">
+								<nobr>
+							
+										你好,<%
+													request.setCharacterEncoding("UTF-8");//保证中文编码
+													String UserName = request.getParameter("UserName");
+													System.out.println("index.jsp+"+UserName);
+													session.setAttribute("USERNAME",UserName); 
+													out.println(UserName); 
+												    //response.sendRedirect("paper.jsp"); 
+												%>
+												!!!								</nobr>
+
+							</p>
 						</a>
 					</div>
+					<!-- 
 					
 						<div class="fl yxnwtop">
 							<a href="">

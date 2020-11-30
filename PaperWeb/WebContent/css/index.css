@@ -21,7 +21,7 @@
 .txtScroll-top .infoList li{ height:42px; line-height:42px; width: 765px; font-size: 12px;padding-left: 30px;}
 
 .conentl{padding-top: 23px;}
-.conentl .newstop{width: 725px;height: 43px;line-height: 43px;background-color: #1a86d3;position: relative;}
+.conentl .newstop{width: 725px;height: 43px;line-height: 43px;background-color: #7694d6;position: relative;}
 .conentl .newstop img{position: absolute;top: 10px;left: 20px;}
 .conentl .newstop span{position: absolute;left: 56px;color: #FFFFFF;font-weight: bold;}
 .conentl .newstop a{position: absolute;right: 20px;color: #FFFFFF;}
@@ -46,17 +46,17 @@
 .newscont .newslist .newsfrtop span{color: #999999;}
 .newscont .newslist .newsfrtop h2{width: 265px;color: #000000;}
 .newscont .newslist .newsfrtop p{color: #666666;line-height: 25px;padding-top: 5px;}
-.newscont .newslist .newsfrtop :hover h2{color: #1a86d3;}
-.newscont .newslist .newsfrtop :hover span{color: #1a86d3;}
-.newscont .newslist .newsfrtop :hover p{color: #1a86d3;}
+.newscont .newslist .newsfrtop :hover h2{color: #7694d6;}
+.newscont .newslist .newsfrtop :hover span{color: #7694d6;}
+.newscont .newslist .newsfrtop :hover p{color: #7694d6;}
 .newscont .newslist ul li{padding-top: 19px;height: 20px;}
 .newscont .newslist ul li h2{color: #000000;width: 260px;}
 .newscont .newslist ul li span{color: #999999;}
-.newscont .newslist ul li:hover h2{color: #1a86d3;}
-.newscont .newslist ul li:hover span{color: #1a86d3;}
+.newscont .newslist ul li:hover h2{color: #7694d6;}
+.newscont .newslist ul li:hover span{color: #7694d6;}
 	
 .conentfr{padding-top: 23px;}
-.zhuanti{background-color: #3691d7;width: 350px;}
+.zhuanti{background-color: #7694d6;width: 350px;}
 .rediantop{width: 350px;height: 43px;line-height: 43px;position: relative;}
 .rediantop img{position: absolute;top: 10px;left: 20px;}
 .rediantop span{position: absolute;left: 60px;color: #FFFFFF;}
@@ -64,7 +64,7 @@
 
 	
 .massges1{padding-top:10px;}
-.zixu{background-color: #3691d7;width: 350px;}
+.zixu{background-color: #7694d6;width: 350px;}
 .massgtop1{width: 350px;height: 43px;line-height: 43px;position: relative;}
 .massgtop1 img{position: absolute;top: 10px;left: 20px;}
 .massgtop1 span{position: absolute;left: 60px;color: #FFFFFF;font-weight: bold;}
@@ -75,16 +75,16 @@
 .massges1 ul li:last-child{border-bottom:0;}
 .massges1 ul li h3{color: #000000;width: 242px;}
 .massges1 ul li span{color: #999999;}
-.massges1 ul li:hover h3{color: #1a86d3;}
-.massges1 ul li:hover span{color: #1a86d3;}
+.massges1 ul li:hover h3{color: #7694d6;}
+.massges1 ul li:hover span{color: #7694d6;}
 
 
 
 
-.tab-title .item-cur {color: #1a86d3;border-bottom:1px solid #1a86d3;}
+.tab-title .item-cur {color: #1a86d3;border-bottom:1px solid #7694d6;}
 .tab-cont{position: relative; width:1100px;margin:10px auto;overflow: hidden; background-color: #f5f5f5;}
 .tab-cont_wrap {position: absolute;}
 .tab-cont .item{width:1100px;text-align: center;color: #fff;}
 .lanren li{width:160px;text-align: center;height:50px;list-style:none;position:relative;float:left;overflow:hidden;  }
 .lanren li a{font-size: 12px;color: #010101;line-height: 50px;display: inline-block;}
-.lanren li a:hover{color: #1a86d3;}
+.lanren li a:hover{color: #7694d6;}

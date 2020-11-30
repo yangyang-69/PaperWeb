@@ -2,6 +2,11 @@ package daos;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+
+import beans.Minorities;
 
 public class MinorityDao {
 	//连接数据库要使用的量
@@ -17,9 +22,28 @@ public class MinorityDao {
 		Class.forName(jdbcName);
 		conn = DriverManager.getConnection(dbUrl,name,password);
 	}
-	/*
-	 * 此处插入数据处理方法
-	 */
+	
+	public  ArrayList<Minorities> getMinority() throws Exception{
+		ArrayList<Minorities> MinorityList=new ArrayList<Minorities>();
+		getCon();
+		System.out.println("数据库连接成功");
+		String sql = "select MinorityID,MinorityName,MinorityInfo FROM Minority";
+		Statement state = conn.createStatement();
+		ResultSet rs=state.executeQuery(sql);
+		if(rs.next()){
+			Minorities M=new Minorities();
+			M.setMinorityID(rs.getInt("MinorityID"));
+			M.setMinorityName(rs.getString("MinorityName"));
+			M.setMinorityInfo(rs.getString("MinorityInfo"));
+			MinorityList.add(M);
+		}
+		rs.close();
+		state.close();
+		closeCon(conn);
+		return MinorityList;
+	}
+	
+
 	//关闭数据库
 	public void closeCon(Connection con)throws Exception{
 		if(con!=null)
