@@ -7,7 +7,7 @@ public class UserDao {
 		private String dbUrl=
 				"jdbc:mysql://114.116.220.209:3306/paperweb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC";
 				
-		private String name="autumn";//写上登陆数据库系统的用户名（安装数据库时候设置的用户名）
+		private String name="hhh";//写上登陆数据库系统的用户名（安装数据库时候设置的用户名）
 		private String password="Autumn2020";//写上登陆数据库系统的密码
 		private String jdbcName="com.mysql.cj.jdbc.Driver";//数据库驱动
 		private Connection conn = null;
