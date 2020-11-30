@@ -74,7 +74,54 @@
 				        论文标题：<input type="text" name="Title" /><br>
 				        摘要：<input type="text" name="Summary"/><br>
 				        期刊：<input type="text" name="Source"/><br>
+				        <select name="SourceSelect1">
+				        <option>(请选择期刊)</option>
+				        <option value="1">大舞台</option>
+				        <option value="2">地理学报</option>
+				        <option value="3">干旱区资源与环境</option>
+				        <option value="4">贵州民族研究</option>
+				        <option value="5">民族文学研究</option>
+				        <option value="6">齐鲁学刊</option>
+				        <option value="7">青海民族研究</option>
+				        <option value="8">青海社会科学</option>
+				        <option value="9">世界宗教文化</option>
+				        <option value="10">体育文化导刊</option>
+				        <option value="11">文艺争鸣</option>
+				        <option value="12">舞蹈</option>
+				        <option value="13">西北民族研究</option>
+				        <option value="14">西藏研究</option>
+				        <option value="15">西南民族大学学报(人文社会科学版)</option>
+				        <option value="16">现代传播(中国传媒大学学报)</option>
+				        <option value="17">小说评论</option>
+				        <option value="18">烟台大学学报(哲学社会科学版)</option>
+				        <option value="19">中国藏学</option>
+				        <option value="20">中华文化论坛</option>
+				        <option value="21">中学政治教学参考</option>
+				        <option value="22">广西民族学院学报(哲学社会科学版)</option>
+				        <option value="23">旅游学刊</option>
+				        <option value="24">思想战线</option>
+				        <option value="25">云南民族大学学报(哲学社会科学版)</option>
+				        <option value="26">云南社会科学</option>
+				        <option value="27">云南艺术学院学报</option>
+				        <option value="28">兰台世界</option>
+				        <option value="29">民族学刊</option>
+				        <option value="30">民族研究</option>
+				        <option value="31">人民论坛</option>
+				        <option value="32">西南民族大学学报(人文社科版)</option>
+				        <option value="33">西南民族学院学报(哲学社会科学版)</option>
+				        <option value="34">新闻界</option>
+				        <option value="35">学术探索</option>
+				        <option value="36">中国音乐学</option>
+				        <option value="37">电影文学</option>
+				        <option value="38">中国民族</option>
+				        </select>
 				        民族：<input type="text" name="Minority"/><br>
+				        <select name="MinoritySelect2">
+				        <option>(请选择民族)</option>
+				        <option value="1">藏</option>
+				        <option value="2">纳西</option>
+				        <option value="3">彝</option>
+				        </select>
 				        <input type="submit" value="提交论文" onClick="return yanzheng3()"/><br>
 		    		</form>
 				</div>
