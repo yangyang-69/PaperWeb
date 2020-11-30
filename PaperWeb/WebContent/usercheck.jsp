@@ -20,6 +20,10 @@
 		System.out.println(UserName);
 		System.out.println(password);
 		Users user = userdao.UserCheckbygetpass(UserName);
+		//
+		String UserOrganization = user.getUserOrganization();
+		System.out.println("用户的单位是："+UserOrganization);
+		//
 		//调用Dao的方法查询数据库
 		if(user.getPassword().equals(password) && user!= null){
 			//判断是否满足条件

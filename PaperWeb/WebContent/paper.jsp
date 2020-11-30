@@ -10,8 +10,7 @@
 		<link rel="stylesheet" href="css/pgzg.css">
 		<script type="text/javascript">
 		function yanzheng3(){
-			if(subpaper_form1.Title.value == "" ||subpaper_form1.Summary.value ==""
-					||subpaper_form1.Source.value=="" ||subpaper_form1.Minority.value=="" ){
+			if(subpaper_form1.Title.value == "" ||subpaper_form1.Summary.value ==""){
 				alert("任意选项不能为空,请重新填写");
 				return false;
 			}
@@ -70,12 +69,12 @@
 						String UserName = (String)session.getAttribute("USERNAME");
 						System.out.println("paper.jsp+"+UserName);
 					%>
-					<form name="subpaper_form1" action="" method="post">
+					<form name="subpaper_form1" action="papercall.jsp" method="post">
 				        论文标题：<input type="text" name="Title" /><br>
 				        摘要：<input type="text" name="Summary"/><br>
-				        期刊：<input type="text" name="Source"/><br>
+				        期刊：
 				        <select name="SourceSelect1">
-				        <option>(请选择期刊)</option>
+				        <!-- <option>(请选择期刊)</option> -->
 				        <option value="1">大舞台</option>
 				        <option value="2">地理学报</option>
 				        <option value="3">干旱区资源与环境</option>
@@ -114,14 +113,14 @@
 				        <option value="36">中国音乐学</option>
 				        <option value="37">电影文学</option>
 				        <option value="38">中国民族</option>
-				        </select>
-				        民族：<input type="text" name="Minority"/><br>
-				        <select name="MinoritySelect2">
-				        <option>(请选择民族)</option>
+				        </select><br>
+				        民族：
+				        <select name="MinoritySelect1">
+				        <!-- <option>(请选择民族)</option> -->
 				        <option value="1">藏</option>
 				        <option value="2">纳西</option>
 				        <option value="3">彝</option>
-				        </select>
+				        </select><br>
 				        <input type="submit" value="提交论文" onClick="return yanzheng3()"/><br>
 		    		</form>
 				</div>

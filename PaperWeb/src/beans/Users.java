@@ -12,7 +12,7 @@ public class Users {
 		return UserOrganization;
 	}
 	public void setUserOrganization(String userOrganization) {
-		UserOrganization = userOrganization;
+		this.UserOrganization = userOrganization;
 	}
 	public void setUserID(int userID) {
 		UserID = userID;
@@ -21,7 +21,7 @@ public class Users {
 		return UserName;
 	}
 	public void setUserName(String userName) {
-		UserName = userName;
+		this.UserName = userName;
 	}
 	public String getPassword() {
 		return password;

@@ -26,15 +26,14 @@ public class UserDao {
 			state.executeUpdate(sql);
 			closeCon(conn);
 			return result;
-			
 		}
 		public Users UserCheckbygetpass(String UserName) 
 				throws Exception{
 			Users result = null;//声明对象
 			getCon();
 			System.out.println("数据库连接成功");
-			String sql = "select UserName,password from user where UserName =?";
-			PreparedStatement state = conn.prepareStatement(sql);
+			String sq2 = "select UserName,password,UserOrganization from user where UserName =?";
+			PreparedStatement state = conn.prepareStatement(sq2);
 			state.setString(1,UserName);
 			ResultSet rs=state.executeQuery();
 			//将结果放入rs，从rs中遍历
@@ -43,6 +42,7 @@ public class UserDao {
 				result=new Users();
 				result.setUserName(rs.getString("UserName"));
 				result.setPassword(rs.getString("password"));
+				result.setUserOrganization(rs.getString("UserOrganization"));
 				}
 				closeCon(conn);
 			return result;
