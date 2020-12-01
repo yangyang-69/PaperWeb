@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="beans.*" %>
+<%@ page import="daos.*" %>
 <html>
 <head>
 		<meta charset="utf-8" />
@@ -47,64 +49,28 @@
 		<div class="w-all">
 			<div class="w-main">
 				<div class="goodsxxfl fl">
-					<dl>
-						<dt class="fs-16">产品中心</dt>
-						<dd class="fs-14"><a href="">A类产品</a></dd>
-						<dd class="fs-14"><a href="">B类产品</a></dd>
-						<dd class="fs-14"><a href="">B类产品</a></dd>
-						<dd class="fs-14"><a href="">B类产品</a></dd>
-						<dd class="fs-14"><a href="">B类产品</a></dd>
-						<dd class="fs-14"><a href="">B类产品</a></dd>
-						
-						<dd class="fs-14"><a href="" class="change">C类产品</a></dd>
-					</dl>
-				</div>
-				<div class="goodsxxfr fr">
 					<div class="nagelj">
 						当前位置：<a href="">首页></a>
 						<a href="">搜索></a>
 					</div>
-					<div class="goodslist">
-						<ul>
-							<li>
-								<a href="">
-								<img  src="img/chanp01.png" alt=""/>
-								
-								<div class="hoverimg">
-									<img src="img/fangdalogo.png" alt=""/>
-								</div>
-								<p class="one_hidden">产品</p>
-								</a>
-							</li>
-							<li>
-								<a href="">
-								<img  src="img/chanp01.png" alt=""/>
-								<div class="hoverimg">
-									<img src="img/fangdalogo.png" alt=""/>
-								</div>
-								<p>产品</p>
-								</a>
-							</li>
-							<li>
-								<a href="">
-								<img  src="img/chanp01.png" alt=""/>
-								<div class="hoverimg">
-									<img src="img/fangdalogo.png" alt=""/>
-								</div>
-								<p>产品</p>
-								</a>
-							</li>
-						</ul>
-					</div>
-					<div class="clear"></div>
-					<div class="article_page_box">
-						<div class="page">
-							<a href="#">1</a>
-							<a href="#">2</a>
-							<a class="on" href="#">3</a>
-						</div>
-					</div>
 				</div>
+				这里是论文搜索页面。请选择你要搜索的类型。<br>
+				<form name="Searchform1" action="search.jsp" method="post">
+					请选择类型：<select name="SearchSelect1">
+				        <option value="1">论文信息</option>
+				        <option value="2">民族</option>
+				        <option value="3">作者</option>
+				        <option value="4">期刊</option>
+				    </select><br>
+				    请输入关键词：<input type="text" name="search"/><br>
+				    <input type="submit" value="搜索"/><br>
+				</form>
+				以下为搜索结果：
+				<%
+					request.setCharacterEncoding("UTF-8");//保证中文编码
+					String searchchoose = request.getParameter("SearchSelect1");
+					int choose= Integer.parseInt(searchchoose);
+				%>
 			</div>
 		</div>
 		<div class="clear"></div>
