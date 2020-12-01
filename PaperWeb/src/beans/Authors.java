@@ -1,6 +1,6 @@
 package beans;
 
-public class Autors {
+public class Authors {
 	private int AuthorID;
 	private String AuthorName;
 	private String Organization;
