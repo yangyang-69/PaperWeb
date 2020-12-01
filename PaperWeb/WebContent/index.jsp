@@ -94,7 +94,7 @@
 						<a href="paper.jsp" onClick="setsesion1()">论文发表</a>
 					</li>
 					<li>
-						<a href="">搜索</a>
+						<a href="search.jsp">搜索</a>
 					</li>
 					
 				</ul>
