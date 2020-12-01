@@ -3,6 +3,8 @@
 <%@page import="beans.Minorities"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="daos.MinorityDao"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <html>
 <head>
 		<meta charset="utf-8" />
@@ -17,18 +19,16 @@
 	MinorityDao minorityDao=new MinorityDao();
 	ArrayList<Minorities> minorityList=minorityDao.getMinority();
 	request.setAttribute("minorityList",minorityList);
-
-
- %>
+%>
 
 <div class="w-all top">
-			<div class="w-main">
-					<a href="" class="toplogoa fl">
+	<div class="w-main">
+		<a href="" class="toplogoa fl">
 						<img src="img/toplogo.png" alt="" />
-					</a>
-			</div>
-		</div>
-		<div class="clear"></div>
+		</a>
+	</div>
+</div>
+<div class="clear"></div>
 		<div class="w-all navig">
 			<div class="w-main">
 				<ul>
@@ -55,6 +55,7 @@
 		</div>
 		<div class="clear"></div>
 		<div class="w-all bannertu" style="background: url(img/bg02.png) no-repeat center;background-size: 100% 100%;"></div>
+		<div class="clear"></div>
 		<div class="w-all">
 			<div class="w-main">
 				<div class="goodsxxfr fr">
@@ -62,37 +63,37 @@
 						当前位置：<a href="">首页></a>
 						<a href="">民族知识投递></a>
 					</div>
-					
-					
-					<table align="center" border="1" width="300">
-						 <caption>民族知识投递</caption>
-						 <tr bgcolor="#C4E1FF">
-						 	<th>民族序号</th>
-						 	<th>民族名称</th>
-						 	<th>民族介绍</th>
-						 </tr>
-						 <c:forEach items="${minorityList }" var="M">
-						 	<tr>
-						 		<td>
-						 			${M.MinorityID}		
-						 		</td>
-						 		<td>
-						 			${M.MinorityName}
-						 		</td>
-						 		<td>
-						 			${M.MinorityInfo}
-						 		</td>
-						 	</tr>
-						 </c:forEach>
- 
- </table>
-			
-					
 				</div>
 			</div>
 		</div>
 		<div class="clear"></div>
-		<div class="h-30"></div>
+		<div class="biaoge">
+			<div id="wrap">
+				<table class="bordered">
+								 <caption>
+								 	<h2>民族知识投递</h2>
+								 </caption>
+								 <thead>
+									 <tr bgcolor="#C4E1FF">
+									 	<th>民族名称</th>
+									 	<th>民族简介</th>
+									 </tr>
+								  </thead>
+								 <c:forEach items="${minorityList}" var="M">
+								 <tbody>
+								 	<tr>
+								 		<td>
+								 			${M.getMinorityName()}	
+								 		</td>
+								 		<td>
+								 			${M.getMinorityInfo()}
+								 		</td>
+								 	</tr>
+								 </tbody>
+								</c:forEach>
+							</table>
+					</div>	
+				</div>	
 		<!--footer-->
 		<div class="clear"></div>
 		<div class="w-all banquan">

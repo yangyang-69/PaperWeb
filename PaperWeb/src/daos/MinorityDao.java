@@ -2,8 +2,8 @@ package daos;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.ArrayList;
 
 import beans.Minorities;
@@ -27,12 +27,13 @@ public class MinorityDao {
 		ArrayList<Minorities> MinorityList=new ArrayList<Minorities>();
 		getCon();
 		System.out.println("数据库连接成功");
-		String sql = "select MinorityID,MinorityName,MinorityInfo FROM Minority";
-		Statement state = conn.createStatement();
-		ResultSet rs=state.executeQuery(sql);
-		if(rs.next()){
+		String sql = "select MinorityID,MinorityName,MinorityInfo FROM minority";
+		PreparedStatement state = conn.prepareStatement(sql);
+		ResultSet rs=state.executeQuery();
+		while(rs.next()){
 			Minorities M=new Minorities();
 			M.setMinorityID(rs.getInt("MinorityID"));
+			System.out.println(rs.getInt("MinorityID"));
 			M.setMinorityName(rs.getString("MinorityName"));
 			M.setMinorityInfo(rs.getString("MinorityInfo"));
 			MinorityList.add(M);
