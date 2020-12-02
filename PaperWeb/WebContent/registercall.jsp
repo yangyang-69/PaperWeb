@@ -26,14 +26,14 @@
 
 		
 		
-	<img src="img/bg5.jpg"/>
+	
 	<div id="login_id">
 		    <h2>注册成功，请您<a href="hello.jsp">返回登录</a> </h2>
 		
 	</div>
-	<div id="buttom_id">
-   		<h5>版权所有:哈哈哈小组</h5>
-	</div>	
+	<div class="buttom_id">
+   			<p>版权所有:哈哈哈小组</p>
+		</div>	
 	
 		
 </body>

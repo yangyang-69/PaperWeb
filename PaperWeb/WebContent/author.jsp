@@ -13,6 +13,7 @@
 	<div class="w-all top">
 			<div class="w-main">
 					<a href="" class="toplogoa fl">
+						<img src="img/toplogo1.png" alt="" />
 						<img src="img/toplogo.png" alt="" />
 					</a>
 			</div>
@@ -22,22 +23,22 @@
 			<div class="w-main">
 				<ul>
 					<li>
-						<a href="">首页</a>
+						<a href="index.jap">首页</a>
 					</li>
 					<li>
-						<a href="">民族知识投递</a>
+						<a href="Minority.jsp">民族知识投递</a>
 					</li>
 					<li>
-						<a href="">期刊信息</a>
+						<a href="qikan.jsp">期刊信息</a>
 					</li>
 					<li class="on">
 						<a href="">作者简介</a>
 					</li>
 					<li>
-						<a href="">论文发表</a>
+						<a href="paper.jsp">论文发表</a>
 					</li>
 					<li>
-						<a href="">搜索</a>
+						<a href="search.jsp">搜索</a>
 					</li>
 				</ul>
 			</div>

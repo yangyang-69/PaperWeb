@@ -22,7 +22,6 @@
 	}
 </script>
 <body>
-		<img src="img/bg5.jpg" />
 		<div id="login_id">
 		    <h1>请注册</h1>
 		    <form id="login_form2" name="form3" action="registercall.jsp" method="post">
@@ -32,8 +31,8 @@
 		        <input id="login" type="button" class="loginbtn" value="注册" onClick="yanzheng2()"/>
 		    </form>
 		</div>
-		<div id="buttom_id">
-   		<h5>版权所有:哈哈哈小组</h5>
+		<div class="buttom_id">
+   			<p>版权所有:哈哈哈小组</p>
 		</div>
 
 	
