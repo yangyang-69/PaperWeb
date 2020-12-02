@@ -3,10 +3,37 @@ package beans;
 public class Papers {
 	private int ID;
 	private String Title;
-	private int AutorID;
+	private int AuthorID;
 	private String Summary;
 	private int SourceID;
 	private String PubTime;//暂时还不确定时间在Eclipse中的数据类型
+	private int Volume;
+	private int Period;
+	private String PageCount;
+	private int Cited;
+	private int Downloaded;
+	private int MinorityID;
+	private String AuthorName;
+	private String SourceName;
+	private String MinorityName;
+	public String getSourceName() {
+		return SourceName;
+	}
+	public void setSourceName(String sourceName) {
+		SourceName = sourceName;
+	}
+	public String getMinorityName() {
+		return MinorityName;
+	}
+	public void setMinorityName(String minorityName) {
+		MinorityName = minorityName;
+	}
+	public String getAuthorName() {
+		return AuthorName;
+	}
+	public void setAuthorName(String authorName) {
+		AuthorName = authorName;
+	}
 	public int getID() {
 		return ID;
 	}
@@ -19,11 +46,11 @@ public class Papers {
 	public void setTitle(String title) {
 		Title = title;
 	}
-	public int getAutorID() {
-		return AutorID;
+	public int getAuthorID() {
+		return AuthorID;
 	}
-	public void setAutorID(int autorID) {
-		AutorID = autorID;
+	public void setAuthorID(int autorID) {
+		AuthorID = autorID;
 	}
 	public String getSummary() {
 		return Summary;
@@ -79,10 +106,4 @@ public class Papers {
 	public void setMinorityID(int minorityID) {
 		MinorityID = minorityID;
 	}
-	private int Volume;
-	private int Period;
-	private String PageCount;
-	private int Cited;
-	private int Downloaded;
-	private int MinorityID;
 }

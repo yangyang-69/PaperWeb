@@ -2,9 +2,13 @@ package daos;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
 
-import beans.Papers;
+import beans.*;
+import daos.*;
 
 public class PaperDao {
 	//连接数据库要使用的量
@@ -36,7 +40,134 @@ public class PaperDao {
 		closeCon(conn);
 		return result;
 	}
-	
+	//search.jsp中论文信息查找
+	public  ArrayList<Papers> getPaper(String Paperkey) throws Exception{
+		ArrayList<Papers> PaperList = new ArrayList<Papers>();
+		getCon();
+		System.out.println("数据库连接成功");
+		String sql = 
+				"select * from paper,author,minority,Source where " + 
+				"paper.AuthorID = author.AuthorID " + 
+				"and paper.MinorityID = minority.MinorityID " + 
+				"and paper.SourceID = source.SourceID " + 
+				"and (Title like '%"+Paperkey+"%'or Summary like'%"+Paperkey+"%')";
+		PreparedStatement state = conn.prepareStatement(sql);
+		ResultSet rs=state.executeQuery();
+		while(rs.next()){
+			Papers p = new Papers();
+			p.setTitle(rs.getString("Title"));
+			p.setAuthorName(rs.getString("AuthorName"));
+			p.setSummary(rs.getString("Summary"));
+			p.setSourceName(rs.getString("SourceName"));
+			p.setPubTime(rs.getString("PubTime"));
+			p.setVolume(rs.getInt("Volume"));
+			p.setPeriod(rs.getInt("Period"));
+			p.setPageCount(rs.getString("PageCount"));
+			p.setCited(rs.getInt("Cited"));
+			p.setDownloaded(rs.getInt("Downloaded"));
+			p.setMinorityName(rs.getString("MinorityName"));
+			PaperList.add(p);
+		}
+		rs.close();
+		state.close();
+		closeCon(conn);
+		return PaperList;
+	}
+	public  ArrayList<Papers> getPaperAuthor(String keyword) throws Exception{
+		ArrayList<Papers> PaperList = new ArrayList<Papers>();
+		getCon();
+		System.out.println("数据库连接成功");
+		String sql = 
+				"select * from paper,author,minority,Source where paper.AuthorID = author.AuthorID " + 
+				"and paper.MinorityID = minority.MinorityID " + 
+				"and paper.SourceID = source.SourceID " + 
+				"and authorName like '%"+keyword+"%'";
+		PreparedStatement state = conn.prepareStatement(sql);
+		ResultSet rs=state.executeQuery();
+		while(rs.next()){
+			Papers p = new Papers();
+			p.setTitle(rs.getString("Title"));
+			p.setAuthorName(rs.getString("AuthorName"));
+			p.setSummary(rs.getString("Summary"));
+			p.setSourceName(rs.getString("SourceName"));
+			p.setPubTime(rs.getString("PubTime"));
+			p.setVolume(rs.getInt("Volume"));
+			p.setPeriod(rs.getInt("Period"));
+			p.setPageCount(rs.getString("PageCount"));
+			p.setCited(rs.getInt("Cited"));
+			p.setDownloaded(rs.getInt("Downloaded"));
+			p.setMinorityName(rs.getString("MinorityName"));
+			PaperList.add(p);
+		}
+		rs.close();
+		state.close();
+		closeCon(conn);
+		return PaperList;
+	}
+	public  ArrayList<Papers> getPaperMinority(String keyword) throws Exception{
+		ArrayList<Papers> PaperList = new ArrayList<Papers>();
+		getCon();
+		System.out.println("数据库连接成功");
+		String sql = 
+				"select * from paper,author,minority,Source where " + 
+				"paper.AuthorID = author.AuthorID " + 
+				"and paper.MinorityID = minority.MinorityID " + 
+				"and paper.SourceID = source.SourceID " + 
+				"and MinorityName like '%"+keyword+"%'";
+		PreparedStatement state = conn.prepareStatement(sql);
+		ResultSet rs=state.executeQuery();
+		while(rs.next()){
+			Papers p = new Papers();
+			p.setTitle(rs.getString("Title"));
+			p.setAuthorName(rs.getString("AuthorName"));
+			p.setSummary(rs.getString("Summary"));
+			p.setSourceName(rs.getString("SourceName"));
+			p.setPubTime(rs.getString("PubTime"));
+			p.setVolume(rs.getInt("Volume"));
+			p.setPeriod(rs.getInt("Period"));
+			p.setPageCount(rs.getString("PageCount"));
+			p.setCited(rs.getInt("Cited"));
+			p.setDownloaded(rs.getInt("Downloaded"));
+			p.setMinorityName(rs.getString("MinorityName"));
+			PaperList.add(p);
+		}
+		rs.close();
+		state.close();
+		closeCon(conn);
+		return PaperList;
+	}
+	public  ArrayList<Papers> getPaperSource(String keyword) throws Exception{
+		ArrayList<Papers> PaperList = new ArrayList<Papers>();
+		getCon();
+		System.out.println("数据库连接成功");
+		String sql = 
+				"select * from paper,author,minority,Source where " + 
+				"paper.AuthorID = author.AuthorID " + 
+				"and paper.MinorityID = minority.MinorityID " + 
+				"and paper.SourceID = source.SourceID " + 
+				"and SourceName like '%"+keyword+"%'";
+		PreparedStatement state = conn.prepareStatement(sql);
+		ResultSet rs=state.executeQuery();
+		while(rs.next()){
+			Papers p = new Papers();
+			p.setTitle(rs.getString("Title"));
+			p.setAuthorName(rs.getString("AuthorName"));
+			p.setSummary(rs.getString("Summary"));
+			p.setSourceName(rs.getString("SourceName"));
+			p.setPubTime(rs.getString("PubTime"));
+			p.setVolume(rs.getInt("Volume"));
+			p.setPeriod(rs.getInt("Period"));
+			p.setPageCount(rs.getString("PageCount"));
+			p.setCited(rs.getInt("Cited"));
+			p.setDownloaded(rs.getInt("Downloaded"));
+			p.setMinorityName(rs.getString("MinorityName"));
+			PaperList.add(p);
+		}
+		rs.close();
+		state.close();
+		closeCon(conn);
+		return PaperList;
+	}
 	//关闭数据库
 	public void closeCon(Connection con)throws Exception{
 		if(con!=null)
