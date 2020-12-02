@@ -5,11 +5,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>论文提交成功页面</title>
+	<meta charset="UTF-8">
+	<title>论文提交成功页面</title>
+	<link rel="stylesheet" type="text/css" href="css/TransparentLoginBoxDemo.css">
+
 </head>
 <body>
-	请等待提<br>
+	<div id="login_id">
+		<h3>1.请等待...</h3>
 	<%
 		//从paper.jsp获取必要的值
 		request.setCharacterEncoding("UTF-8");//保证中文编码
@@ -50,7 +53,14 @@
 		PaperDao paperdao = new PaperDao();
 		Papers paper = paperdao.InsertPaper(Title, Summary, SourceID, MinorityID, AuthorID);
 		System.out.println("插入论文成功");
-		out.println("论文发表成功");
 	%>
+	
+		    <h3>2.论文发表成功</h3>
+			<a href="index.jsp" >返回主页</a>
+		
+	</div>
+	<div class="buttom_id">
+   			<p>版权所有:哈哈哈小组</p>
+	</div>
 </body>
 </html>

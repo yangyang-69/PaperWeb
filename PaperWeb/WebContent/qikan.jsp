@@ -13,6 +13,7 @@
 	<div class="w-all top">
 			<div class="w-main">
 					<a href="" class="toplogoa fl">
+						<img src="img/toplogo1.png" alt="" />
 						<img src="img/toplogo.png" alt="" />
 					</a>
 			</div>

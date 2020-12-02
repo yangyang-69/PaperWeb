@@ -48,29 +48,6 @@
 							</p>
 						</a>
 					</div>
-					<!-- 
-					
-						<div class="fl yxnwtop">
-							<a href="">
-								<img src="img/topemail.png" align="" class="fl">
-								<p class="fs-12 fc-1 fl">企业邮箱</p>
-							</a>
-							<a href="">
-								<img src="img/gsnwlogo.png" alt="" class="fl">
-								<p class="fs-12 fc-1 fl">公司内网</p>
-							</a>
-							<a href="">
-								<img src="img/wsxflogo.png" alt="" class="fl">
-								<p class="fs-12 fc-1 fl">网上信访</p>
-							</a>
-						</div>
-						<form>
-							<div class="fr topseacher">
-								<input type="text"  class="fs-12 fc-1 nrinput" placeholder="搜索" />
-								<button type="submit" class="topsubmit">&nbsp;</button>
-							</div>
-						</form>
-					 -->
 					
 			</div>
 		</div>
@@ -82,16 +59,16 @@
 						<a href="">首页</a>
 					</li>
 					<li>
-						<a href="">民族知识投递</a>
+						<a href="Minority.jsp">民族知识投递</a>
 					</li>
 					<li>
-						<a href="">期刊信息</a>
+						<a href="qikan.jsp">期刊信息</a>
 					</li>
 					<li>
-						<a href="">作者信息</a>
+						<a href="author.jsp">作者简介</a>
 					</li>
 					<li>
-						<a href="paper.jsp" onClick="setsesion1()">论文发表</a>
+						<a href="paper.jsp">论文发表</a>
 					</li>
 					<li>
 						<a href="search.jsp">搜索</a>
@@ -265,12 +242,11 @@
 				</div>
 			</div>
 			</div>
-		</div>
 		<div class="clear"></div>
 		<div class="w-all banquan">
 			<p>版权所有    哈哈哈小组</p>
 		</div>
-	</body>
+	
 
 
 
