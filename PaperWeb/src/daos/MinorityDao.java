@@ -43,8 +43,24 @@ public class MinorityDao {
 		closeCon(conn);
 		return MinorityList;
 	}
-	
-
+	public Minorities getMinorityNamedao(int MinorityID) 
+			throws Exception{
+		Minorities result = null;//声明对象
+		getCon();
+		System.out.println("数据库连接成功");
+		String sq2 = "select MinorityName from minority where MinorityID =?";
+		PreparedStatement state = conn.prepareStatement(sq2);
+		state.setInt(1,MinorityID);
+		ResultSet rs=state.executeQuery();
+		//将结果放入rs，从rs中遍历
+		if(rs.next()){
+			//从查询出来的集合中拿出了一条数据，表示的集合表中的第一个对象。
+			result=new Minorities();
+			result.setMinorityName(rs.getString("MinorityName"));
+			closeCon(conn);
+		}
+		return result;
+	}
 	//关闭数据库
 	public void closeCon(Connection con)throws Exception{
 		if(con!=null)

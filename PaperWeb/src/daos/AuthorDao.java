@@ -5,8 +5,10 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 import beans.Authors;
+import beans.Minorities;
 
 public class AuthorDao {
 	//连接数据库要使用的量
@@ -69,6 +71,24 @@ public class AuthorDao {
 		}
 		return result;
 	}
+	public Authors getAuthorNamedao(int AuthorID) 
+			throws Exception{
+		Authors result = null;//声明对象
+		getCon();
+		System.out.println("数据库连接成功");
+		String sq2 = "select AuthorName from author where AuthorID =?";
+		PreparedStatement state = conn.prepareStatement(sq2);
+		state.setInt(1,AuthorID);
+		ResultSet rs=state.executeQuery();
+		//将结果放入rs，从rs中遍历
+		if(rs.next()){
+			//从查询出来的集合中拿出了一条数据，表示的集合表中的第一个对象。
+			result=new Authors();
+			result.setAuthorName(rs.getString("AuthorName"));
+			closeCon(conn);
+		}
+		return result;
+	}
 	public Authors InsertDB(String AuthorName,String Organization) 
 			throws Exception{
 		Authors result = null;//声明对象
@@ -81,6 +101,26 @@ public class AuthorDao {
 		closeCon(conn);
 		return result;
 	}
+	/*
+	public  ArrayList<Authors> getAuthorIDsdao(String keyword) throws Exception{
+		ArrayList<Authors> AuthorList=new ArrayList<Authors>();
+		getCon();
+		System.out.println("数据库连接成功");
+		String sql = "select AuthorID FROM author where AuthorName like '%"+keyword+"%'";
+		PreparedStatement state = conn.prepareStatement(sql);
+		ResultSet rs=state.executeQuery();
+		while(rs.next()){
+			Authors A = new Authors();
+			A.setAuthorID(rs.getInt("AuthorID"));
+			System.out.println("当前作者表ID（dao）："+rs.getInt("AuthorID"));
+			AuthorList.add(A);
+		}
+		rs.close();
+		state.close();
+		closeCon(conn);
+		return AuthorList;
+	}
+	*/
 	//关闭数据库
 	public void closeCon(Connection con)throws Exception{
 		if(con!=null)
