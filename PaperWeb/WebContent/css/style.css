@@ -109,6 +109,7 @@ h1.header-w3ls {
     letter-spacing: 11px;
     text-shadow: 2px 3px rgba(0, 0, 0, 0.42);
 }
+
 .form-right-w3ls
 {
 	padding-right:0px;}
@@ -263,6 +264,7 @@ input[type="button"] {
     padding-top: 53px;
 	font-size: 71px;
 }
+
 .appointment-w3 {
     width: 45%;
     margin: 39px auto 50px;

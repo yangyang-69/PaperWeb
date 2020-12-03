@@ -12,6 +12,23 @@
 		<meta name="description" content="论文网-搜索">
 		<link rel="stylesheet" href="css/base.css">
 		<link rel="stylesheet" href="css/pgzg.css">
+		<!-- Meta tags -->
+		<!-- Calendar -->
+		<link rel="stylesheet" href="css/jquery-ui.css" />
+		<!-- //Calendar -->
+		<!--stylesheets-->
+		<link href="css/style.css" rel='stylesheet' type='text/css' media="all">
+		<!--//style sheet end here-->
+		<link href="//fonts.googleapis.com/css?family=Cuprum:400,700" rel="stylesheet"/>
+		<script type="application/x-javascript">
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>	
 		<script type="text/javascript">
 		function yanzheng4(){
 			if(Searchform1.search.value == ""){
@@ -58,7 +75,7 @@
 				</ul>
 			</div>
 		</div>
-		<div class="clear"></div>
+		
 		<div class="w-all bannertu" style="background: url(img/bg06.png) no-repeat center;background-size: 100% 100%;"></div>
 		<div class="w-all">
 			<div class="w-main">
@@ -68,17 +85,54 @@
 						<a href="">搜索></a>
 					</div>
 				</div>
-				这里是论文搜索页面。请选择你要搜索的类型。<br>
+			</div>			
+		</div>
+		<div class="fb">
+		<div class="copy">
+			<p></p>
+		</div>
+		<div class="copy">
+			<p></p>
+		</div>
+		<div class="appointment-w3">
+			<h1 class="header-w3ls ">论文搜索</h1>
 				<form name="Searchform1" action="search.jsp" method="post">
-					请选择类型：<select name="SearchSelect1">
-				        <option value="1">论文信息</option>
-				        <option value="2">作者</option>
-				        <option value="3">民族</option>
-				        <option value="4">期刊</option>
-				    </select><br>
-				    请输入关键词：<input type="text" name="search"/><br>
-				    <input type="submit" value="搜索" onClick="yanzheng4()"/><br>
+					<div class="main">
+						<div class="form-add-w3ls">
+							<select class="form-control buttom" name="SearchSelect1">
+										<option value="">选择搜索类型</option>
+								        <option value="1">论文信息</option>
+								        <option value="2">作者</option>
+								        <option value="3">民族</option>
+								        <option value="4">期刊</option>
+						    </select>
+						 </div>
+					</div>
+					<div class="main">
+						<div class="form-add-w3ls">
+				    		<input type="text" name="search" placeholder="请输入关键词" required=""/>
+				    	 </div>
+					</div>	
+					<div class="btnn">
+				    		<input type="submit" value="搜索" onClick="yanzheng4()"/>
+				    </div>
 				</form>
+				</div>
+				<div class="copy">
+			<p></p>
+		</div>
+	
+	
+		<script src="<!-- js -->
+		<script type='text/javascript' src='js/jquery-2.2.3.min.js'></script>
+		<!-- //js -->
+		<!-- Calendajs/jquery-ui.js"></script>
+		<script>
+			$(function () {
+				$("#datepicker,#datepicker1,#datepicker2,#datepicker3").datepicker();
+			});
+		</script>
+				
 				<%
 					//以下为搜索结果
 					request.setCharacterEncoding("UTF-8");//保证中文编码
@@ -367,7 +421,7 @@
 						
 					}
 				%>
-			</div>
+			
 		</div>
 		<div class="clear"></div>
 		<div class="h-30"></div>
