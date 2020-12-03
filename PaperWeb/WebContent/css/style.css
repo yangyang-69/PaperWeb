@@ -109,6 +109,7 @@ h1.header-w3ls {
     letter-spacing: 11px;
     text-shadow: 2px 3px rgba(0, 0, 0, 0.42);
 }
+
 .form-right-w3ls
 {
 	padding-right:0px;}
@@ -123,7 +124,7 @@ h1.header-w3ls {
 	 -webkit-flex-basis: 45%;
 	}
 .form-left-w3l input[type="text"],.form-right-w3ls input[type="text"],.form-left-w3l input[type="email"]
-,.form-control-w3l textarea,.form-right-w3ls  input[type="date"],.form-add-w3ls input[type="text"]{
+,.form-control-w3l textarea,.form-add-w3ls  input[type="password"],.form-add-w3ls input[type="text"]{
     width:500px;
 	padding-left:0px;
     color: #000;
@@ -200,6 +201,29 @@ input[type="submit"] {
     color: #fff;
     background: #000;
 }
+input[type="button"] {
+	    border-radius: 50px;
+    text-transform: uppercase;
+    background: #FFC107;
+    color: #000000;
+    padding:11px 15px;
+    border: none;
+    font-size: 17px;
+    outline: none;
+    width: 50%;
+    letter-spacing: 1px;
+    margin-top: 25px;
+    cursor: pointer;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+ 
+	input[type="button"]:hover {
+    color: #fff;
+    background: #000;
+}
  
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
      color: #fff;
@@ -240,6 +264,7 @@ input[type="submit"] {
     padding-top: 53px;
 	font-size: 71px;
 }
+
 .appointment-w3 {
     width: 45%;
     margin: 39px auto 50px;
@@ -275,6 +300,7 @@ textarea {
  select.form-control,.form-left-w3l input[type="text"], 
  .form-right-w3ls input[type="text"], .form-left-w3l input[type="email"],
  .form-control-w3l textarea, .form-right-w3ls input[type="date"],
+ .form-add-w3ls  input[type="password"],
  .form-add-w3ls input[type="text"] {
     padding: .6em 1em;
     padding-left: 0em;
@@ -353,7 +379,7 @@ h1.header-w3ls {
 }
 select.form-control,
 .form-left-w3l input[type="email"], .form-control-w3l textarea, 
-.form-right-w3ls input[type="date"], .form-add-w3ls input[type="text"] {
+.form-right-w3ls input[type="date"],.form-add-w3ls  input[type="password"], .form-add-w3ls input[type="text"] {
  margin: 0px 0px 9px;
 	}
 textarea {
@@ -370,7 +396,7 @@ h1.header-w3ls {
 select.form-control, .form-left-w3l input[type="text"],
  .form-right-w3ls input[type="text"], .form-left-w3l input[type="email"],
  .form-control-w3l textarea, .form-right-w3ls input[type="date"], 
- .form-add-w3ls input[type="text"] {
+ .form-add-w3ls input[type="text"].form-add-w3ls  input[type="password"], {
     padding: .6em 0em .8em;
 }
 .copy {
@@ -421,7 +447,8 @@ select.form-control,
 .form-left-w3l input[type="email"], 
 .form-control-w3l textarea, 
 .form-right-w3ls input[type="date"],
-.form-add-w3ls input[type="text"] {
+.form-add-w3ls input[type="text"],
+.form-add-w3ls  input[type="password"] {
     font-size: 15px;	
 }
 .copy p {
@@ -449,6 +476,9 @@ h1.header-w3ls {
 input[type="submit"] {
     margin-top: 26px;
 }
+input[type="button"] {
+    margin-top: 15px;
+}
 }
 @media(max-width:384px){
 textarea {
@@ -460,6 +490,7 @@ select.form-control,
  .form-left-w3l input[type="email"], 
  .form-control-w3l textarea, 
  .form-right-w3ls input[type="date"],
+ .form-add-w3ls  input[type="password"],
  .form-add-w3ls input[type="text"] {
     margin: 0px 0px 12px;
     padding: .6em 0em .5em;

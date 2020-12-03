@@ -7,7 +7,6 @@
 <head>
 	<meta charset="UTF-8">
 	<title>注册结果</title>
-	<link rel="stylesheet" type="text/css" href="css/TransparentLoginBoxDemo.css">
 	
 </head>
 <body>
@@ -24,16 +23,7 @@
 		//out.print("注册成功"+UserName);
 %>
 
-		
-		
-	
-	<div id="login_id">
 		    <h2>注册成功，请您<a href="hello.jsp">返回登录</a> </h2>
-		
-	</div>
-	<div class="buttom_id">
-   			<p>版权所有:哈哈哈小组</p>
-		</div>	
 	
 		
 </body>

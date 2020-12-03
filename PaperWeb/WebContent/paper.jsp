@@ -99,7 +99,7 @@
 			<form name="subpaper_form1" action="papercall.jsp" method="post">
 				<div class="main">
 					<div class="form-add-w3ls">
-							<input type="text" name="Title" class="top-up"placeholder="论文标题" required=""/>
+							<input type="text" name="Title" placeholder="论文标题" required=""/>
 					</div>
 				</div>
 				<div class="main">
@@ -173,8 +173,12 @@
 			</form>
 		</div>
 		<div class="copy">
-			<p>版权所有    哈哈哈小组</p>
+			<p></p>
 		</div>
+	</div>
+	<div class="clear"></div>
+		<div class="w-all banquan">
+			<p>版权所有    哈哈哈小组</p>
 	</div>
 		<script src="<!-- js -->
 		<script type='text/javascript' src='js/jquery-2.2.3.min.js'></script>
