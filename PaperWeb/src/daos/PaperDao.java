@@ -168,6 +168,59 @@ public class PaperDao {
 		closeCon(conn);
 		return PaperList;
 	}
+
+	public  ArrayList<Papers> gethotPapers() throws Exception{
+		ArrayList<Papers> PaperList = new ArrayList<Papers>();
+		getCon();
+		System.out.println("数据库连接成功");
+		String sql = 
+				"select Title,MinorityName,AuthorName,Downloaded from paper,minority,author " + 
+				"where (paper.MinorityID = minority.MinorityID " + 
+				"and paper.AuthorID = author.AuthorID) " + 
+				"ORDER BY Downloaded desc limit 5";
+		PreparedStatement state = conn.prepareStatement(sql);
+		ResultSet rs=state.executeQuery();
+		while(rs.next()){
+			Papers p = new Papers();
+			p.setTitle(rs.getString("Title"));
+			//p.setAuthorName(rs.getString("AuthorName"));
+			p.setDownloaded(rs.getInt("Downloaded"));
+			//p.setMinorityName(rs.getString("MinorityName"));
+			PaperList.add(p);
+		}
+		rs.close();
+		state.close();
+		closeCon(conn);
+		return PaperList;
+	}
+	public  ArrayList<Papers> getPaperPubTimeorder() throws Exception{
+		ArrayList<Papers> PaperList = new ArrayList<Papers>();
+		getCon();
+		System.out.println("数据库连接成功");
+		String sql = 
+				"select Title,MinorityName,AuthorName,SourceName,PubTime " + 
+				"from paper,minority,author,source " + 
+				"where paper.AuthorID = author.AuthorID " + 
+				"and paper.MinorityID = minority.MinorityID " + 
+				"and paper.SourceID = source.SourceID " + 
+				"order by PubTime desc limit 10";
+		PreparedStatement state = conn.prepareStatement(sql);
+		ResultSet rs=state.executeQuery();
+		while(rs.next()){
+			Papers p = new Papers();
+			p.setTitle(rs.getString("Title"));
+			p.setAuthorName(rs.getString("AuthorName"));
+			p.setSourceName(rs.getString("SourceName"));
+			p.setMinorityName(rs.getString("MinorityName"));
+			p.setPubTime(rs.getString("PubTime"));
+			PaperList.add(p);
+		}
+		rs.close();
+		state.close();
+		closeCon(conn);
+		return PaperList;
+	}
+	
 	//关闭数据库
 	public void closeCon(Connection con)throws Exception{
 		if(con!=null)

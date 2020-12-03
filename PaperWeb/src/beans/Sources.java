@@ -6,6 +6,13 @@ public class Sources {
 	private String SourcePlace;
 	private String SourceURL;
 	private String SourceTel;
+	private int CountDownloaded;
+	public int getCountDownloaded() {
+		return CountDownloaded;
+	}
+	public void setCountDownloaded(int countDownloaded) {
+		CountDownloaded = countDownloaded;
+	}
 	public int getSourceID() {
 		return SourceID;
 	}

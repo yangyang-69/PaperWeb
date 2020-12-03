@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="beans.*" %>
+<%@ page import="daos.*" %>
+<%@page import="java.util.ArrayList"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html >
 <html>
 <head>
@@ -147,15 +151,63 @@
 							</div>
 							-->
 						</div>
+						<%
+							/*最新新闻：按时间排列最新发布的论文,显示论文 民族 作者 时间（最右边）*/
+							request.setCharacterEncoding("UTF-8");//保证中文编码
+							PaperDao paperdao1 = new PaperDao();
+							ArrayList<Papers> paperList1 = paperdao1.getPaperPubTimeorder();
+							request.setAttribute("paperList1",paperList1);
+							System.out.println("当前搜索结果"+paperList1);
+						%>
 						<div class="fl newslist">
 							<div class="newsfrtop">
+							
+							<table class="bordered">
+								 <caption>
+								 	<h2></h2>
+								 </caption>
+								 <thead>
+									 <tr bgcolor="#C4E1FF">
+									 	<th>标题</th>
+									 	<th>民族</th>
+									 	<th>作者</th>
+									 	<th>期刊</th>
+									 	<th>时间</th>
+									 </tr>
+								  </thead>
+								 <c:forEach items="${paperList1}" var="P1">
+								 <tbody>
+								 	<tr>
+								 		<td>
+								 			${P1.getTitle()}	
+								 		</td>
+								 		<td>
+								 			${P1.getMinorityName()}	
+								 		</td>							 		
+								 		<td>
+								 			${P1.getAuthorName()}	
+								 		</td>
+								 		<td>
+								 			${P1.getSourceName()}	
+								 		</td>
+								 		<td>
+								 			${P1.getPubTime()}	
+								 		</td>
+								 	</tr>
+								 </tbody>
+								</c:forEach>
+							</table>
+							<!--  -->
+							<!-- 
 								<a href="">
 									<h2 class="fs-14 fl one_hidden">集团工会深入公司进行调研指导工作</h2>
 									<span class="fs-12 fr">2016-12-12</span>
 									<div class="clear"></div>
 									<p class="fs-12 tw_hidden">为了贯彻集团工作要求，深化主题劳动竞赛促进企业发展，推动“点赞医药好职工”活动有序开展……</p>
 								</a>
+							-->
 							</div>
+							<!-- 
 							<ul>
 								<li>
 									<a href="">
@@ -194,6 +246,7 @@
 									</a>
 								</li>
 							</ul>
+							 -->
 						</div>
 					</div>
 				</div>
@@ -202,10 +255,45 @@
 						<img  src="img/redainlogo.png" alt=""/>
 						<span class="fs-16">最热论文排行榜</span>
 					</div>
+					<!--  -->
+					<%
+						/*最热论文：,下载次数最多的论文,论文名 民族（或者作者） 下载次数*/
+						request.setCharacterEncoding("UTF-8");//保证中文编码
+						PaperDao paperdao = new PaperDao();
+						ArrayList<Papers> paperList = paperdao.gethotPapers();
+						request.setAttribute("paperList",paperList);
+						System.out.println("当前搜索结果"+paperList);
+					/*
 					<a href=""><img src="img/redian01.png" alt="" /></a><br />
 					<a href=""><img src="img/redian02.png" alt="" /></a><br />
 					<a href=""><img src="img/redian03.png" alt="" /></a><br />
 					<a href=""><img src="img/redian04.png" alt="" /></a>
+					*/
+					%>
+
+					<table class="bordered">
+								 <caption>
+								 	<h2></h2>
+								 </caption>
+								 <thead>
+									 <tr bgcolor="#C4E1FF">
+									 	<th>标题</th>
+									 	<th>下载次数</th>
+									 </tr>
+								  </thead>
+								 <c:forEach items="${paperList}" var="P">
+								 <tbody>
+								 	<tr>
+								 		<td>
+								 			${P.getTitle()}	
+								 		</td>
+								 		<td>
+								 			${P.getDownloaded()}	
+								 		</td>
+								 	</tr>
+								 </tbody>
+								</c:forEach>
+							</table>
 				</div>
 				<div class="fl wtongy"></div>
 				<div class="fr massges1 ">
@@ -213,6 +301,15 @@
 						<img  src="img/redainlogo.png" alt=""/>
 						<span class="fs-16">最热期刊排行榜</span>
 					</div>
+					<!--  -->
+					<%
+						SourceDao sourcedao = new SourceDao();
+						ArrayList<Sources> sourceList = sourcedao.gethotSources();
+						request.setAttribute("sourceList",sourceList);
+						System.out.println("当前搜索结果"+sourceList);
+					%>
+					<%
+					/*
 					<ul>
 						<li>
 							<a href="">
@@ -239,6 +336,32 @@
 								</a>
 						</li>
 					</ul>
+					*/
+					 %>
+					 
+					<table class="bordered">
+								 <caption>
+								 	<h2></h2>
+								 </caption>
+								 <thead>
+									 <tr bgcolor="#C4E1FF">
+									 	<th>期刊</th>
+									 	<th>发表论文个数</th>
+									 </tr>
+								  </thead>
+								 <c:forEach items="${sourceList}" var="S">
+								 <tbody>
+								 	<tr>
+								 		<td>
+								 			${S.getSourceName()}	
+								 		</td>
+								 		<td>
+								 			${S.getCountDownloaded()}	
+								 		</td>
+								 	</tr>
+								 </tbody>
+								</c:forEach>
+							</table>
 				</div>
 			</div>
 			</div>
