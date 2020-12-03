@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="beans.Sources" %>
+<%@ page import="daos.SourceDao" %>
+<%@page import="java.util.ArrayList"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
 		<meta charset="utf-8" />
@@ -23,22 +27,22 @@
 			<div class="w-main">
 				<ul>
 					<li>
-						<a href="">首页</a>
+						<a href="index.jsp">首页</a>
 					</li>
 					<li>
-						<a href="">民族知识投递</a>
+						<a href="Minority.jsp">民族知识投递</a>
 					</li>
 					<li class="on">
 						<a href="">期刊信息</a>
 					</li>
 					<li>
-						<a href="">作者简介</a>
+						<a href="author.jsp">作者简介</a>
 					</li>
 					<li>
-						<a href="">论文发表</a>
+						<a href="paper.jsp">论文发表</a>
 					</li>
 					<li>
-						<a href="">搜索</a>
+						<a href="search.jsp">搜索</a>
 					</li>
 				</ul>
 			</div>
@@ -48,64 +52,49 @@
 		<div class="w-all">
 			<div class="w-main">
 				<div class="goodsxxfl fl">
-					<dl>
-						<dt class="fs-16">产品中心</dt>
-						<dd class="fs-14"><a href="">A类产品</a></dd>
-						<dd class="fs-14"><a href="">B类产品</a></dd>
-						<dd class="fs-14"><a href="">B类产品</a></dd>
-						<dd class="fs-14"><a href="">B类产品</a></dd>
-						<dd class="fs-14"><a href="">B类产品</a></dd>
-						<dd class="fs-14"><a href="">B类产品</a></dd>
-						
-						<dd class="fs-14"><a href="" class="change">C类产品</a></dd>
-					</dl>
-				</div>
-				<div class="goodsxxfr fr">
 					<div class="nagelj">
 						当前位置：<a href="">首页></a>
 						<a href="">期刊信息></a>
 					</div>
-					<div class="goodslist">
-						<ul>
-							<li>
-								<a href="">
-								<img  src="img/chanp01.png" alt=""/>
-								
-								<div class="hoverimg">
-									<img src="img/fangdalogo.png" alt=""/>
-								</div>
-								<p class="one_hidden">产品</p>
-								</a>
-							</li>
-							<li>
-								<a href="">
-								<img  src="img/chanp01.png" alt=""/>
-								<div class="hoverimg">
-									<img src="img/fangdalogo.png" alt=""/>
-								</div>
-								<p>产品</p>
-								</a>
-							</li>
-							<li>
-								<a href="">
-								<img  src="img/chanp01.png" alt=""/>
-								<div class="hoverimg">
-									<img src="img/fangdalogo.png" alt=""/>
-								</div>
-								<p>产品</p>
-								</a>
-							</li>
-						</ul>
-					</div>
-					<div class="clear"></div>
-					<div class="article_page_box">
-						<div class="page">
-							<a href="#">1</a>
-							<a href="#">2</a>
-							<a class="on" href="#">3</a>
-						</div>
-					</div>
 				</div>
+				<%
+					//以下为期刊信息获取代码
+					request.setCharacterEncoding("UTF-8");//保证中文编码
+					SourceDao sourcedao = new SourceDao();
+					ArrayList<Sources> sourceList = sourcedao.getSources();
+					request.setAttribute("sourceList",sourceList);
+				%>
+				<table class="bordered">
+								 <caption>
+								 	<h2>期刊信息</h2>
+								 </caption>
+								 <thead>
+									 <tr bgcolor="#C4E1FF">
+									 	<th>期刊名</th>
+									 	<th>地址</th>
+									 	<th>网址</th>
+									 	<th>电话</th>
+									 </tr>
+								  </thead>
+								 <c:forEach items="${sourceList}" var="S">
+								 <tbody>
+								 	<tr>
+								 		<td>
+								 			${S.getSourceName()}	
+								 		</td>
+								 		<td>
+								 			${S.getSourcePlace()}	
+								 		</td>
+								 		<td>
+								 			${S.getSourceURL()}
+								 		</td>
+								 		<td>
+								 			${S.getSourceTel()}	
+								 		</td>
+								 	</tr>
+								 </tbody>
+								</c:forEach>
+							</table>
 			</div>
 		</div>
 		<div class="clear"></div>

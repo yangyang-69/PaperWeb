@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 
 import beans.Sources;
 
@@ -41,6 +42,28 @@ public class SourceDao {
 			closeCon(conn);
 		}
 		return result;
+	}
+	//以下为期刊信息输出界面调用方法
+	public  ArrayList<Sources> getSources() throws Exception{
+		ArrayList<Sources> SourceList = new ArrayList<Sources>();
+		getCon();
+		System.out.println("数据库连接成功");
+		String sql = 
+				"select * from source";
+		PreparedStatement state = conn.prepareStatement(sql);
+		ResultSet rs=state.executeQuery();
+		while(rs.next()){
+			Sources s = new Sources();
+			s.setSourceName(rs.getString("SourceName"));
+			s.setSourcePlace(rs.getString("SourcePlace"));
+			s.setSourceURL(rs.getString("SourceURL"));
+			s.setSourceTel(rs.getString("SourceTel"));
+			SourceList.add(s);
+		}
+		rs.close();
+		state.close();
+		closeCon(conn);
+		return SourceList;
 	}
 	//关闭数据库
 	public void closeCon(Connection con)throws Exception{
