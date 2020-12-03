@@ -74,6 +74,7 @@
 		</div>
 		<div class="clear"></div>
 		<div class="w-all bannertu" style="background: url(img/bg04.png) no-repeat center;background-size: 100% 100%;"></div>
+		<div class="fb">
 		<div class="w-all">
 			<div class="w-main">
 				<div class="goodsxxfr fr">
@@ -84,18 +85,22 @@
 				</div>
 			</div>			
 		</div>
-		<div class="clear"></div>
 		<%
 						request.setCharacterEncoding("UTF-8");//保证中文编码
 						String UserName = (String)session.getAttribute("USERNAME");
 						System.out.println("paper.jsp+"+UserName);
 		%>
 		
-		<div class="fb">
+		<div class="copy">
+				<p></p>
+			</div>
+			<div class="copy">
+				<p></p>
+			</div>
+		<div class="appointment-w3">
 		<h1 class="header-w3ls">
 						论文发表
 		</h1>
-		<div class="appointment-w3">
 			<form name="subpaper_form1" action="papercall.jsp" method="post">
 				<div class="main">
 					<div class="form-add-w3ls">

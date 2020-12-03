@@ -51,7 +51,7 @@
 		<div class="w-all bannertu" style="background: url(img/bg05.png) no-repeat center;background-size: 100% 100%;"></div>
 		<div class="w-all">
 			<div class="w-main">
-				<div class="goodsxxfl fl">
+				<div class="goodsxxfl fr">
 					<div class="nagelj">
 						当前位置：<a href="">首页></a>
 						<a href="">期刊信息></a>
