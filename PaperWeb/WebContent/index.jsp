@@ -202,6 +202,7 @@
 						<img  src="img/redainlogo.png" alt=""/>
 						<span class="fs-16">最热论文排行榜</span>
 					</div>
+					<!--  -->
 					<a href=""><img src="img/redian01.png" alt="" /></a><br />
 					<a href=""><img src="img/redian02.png" alt="" /></a><br />
 					<a href=""><img src="img/redian03.png" alt="" /></a><br />
@@ -213,6 +214,7 @@
 						<img  src="img/redainlogo.png" alt=""/>
 						<span class="fs-16">最热期刊排行榜</span>
 					</div>
+					<!--  -->
 					<ul>
 						<li>
 							<a href="">
