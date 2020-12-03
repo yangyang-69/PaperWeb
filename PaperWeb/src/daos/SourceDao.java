@@ -65,6 +65,29 @@ public class SourceDao {
 		closeCon(conn);
 		return SourceList;
 	}
+	public  ArrayList<Sources> gethotSources() throws Exception{
+		ArrayList<Sources> SourceList = new ArrayList<Sources>();
+		getCon();
+		System.out.println("数据库连接成功");
+		String sql = 
+				"select SourceName,COUNT(SourceName) " + 
+				"from source,paper " + 
+				"where source.SourceID = paper.SourceID " + 
+				"GROUP BY SourceName order by COUNT(SourceName) desc limit 5";
+		PreparedStatement state = conn.prepareStatement(sql);
+		ResultSet rs=state.executeQuery();
+		while(rs.next()){
+			Sources s = new Sources();
+			s.setSourceName(rs.getString("SourceName"));
+			s.setCountDownloaded(rs.getInt("COUNT(SourceName)"));
+			SourceList.add(s);
+		}
+		rs.close();
+		state.close();
+		closeCon(conn);
+		return SourceList;
+	}
+	
 	//关闭数据库
 	public void closeCon(Connection con)throws Exception{
 		if(con!=null)
