@@ -46,11 +46,12 @@
 	<div class="w-all top">
 			<div class="w-main">
 					<a href="" class="toplogoa fl">
+						<img src="img/toplogo1.png" alt="" />
 						<img src="img/toplogo.png" alt="" />
 					</a>
 			</div>
 		</div>
-		<div class="clear"></div>
+	<div class="clear"></div>
 		<div class="w-all navig">
 			<div class="w-main">
 				<ul>
@@ -75,11 +76,12 @@
 				</ul>
 			</div>
 		</div>
-		
+		<div class="clear"></div>
 		<div class="w-all bannertu" style="background: url(img/bg06.png) no-repeat center;background-size: 100% 100%;"></div>
+		<div class="fb">
 		<div class="w-all">
 			<div class="w-main">
-				<div class="goodsxxfl fl">
+				<div class="goodsxxfl fr">
 					<div class="nagelj">
 						当前位置：<a href="">首页></a>
 						<a href="">搜索></a>
@@ -87,13 +89,13 @@
 				</div>
 			</div>			
 		</div>
-		<div class="fb">
-		<div class="copy">
-			<p></p>
-		</div>
-		<div class="copy">
-			<p></p>
-		</div>
+		
+			<div class="copy">
+				<p></p>
+			</div>
+			<div class="copy">
+				<p></p>
+			</div>
 		<div class="appointment-w3">
 			<h1 class="header-w3ls ">论文搜索</h1>
 				<form name="Searchform1" action="search.jsp" method="post">

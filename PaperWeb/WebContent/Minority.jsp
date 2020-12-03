@@ -56,6 +56,7 @@
 		</div>
 		<div class="clear"></div>
 		<div class="w-all bannertu" style="background: url(img/bg02.png) no-repeat center;background-size: 100% 100%;"></div>
+		<div class="clear"></div>
 		<div class="w-all">
 			<div class="w-main">
 				<div class="goodsxxfr fr">

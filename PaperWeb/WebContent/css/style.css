@@ -74,7 +74,7 @@ ul{
 	padding:0;
 }
 /*-- //Reset-Code --*/
-body {
+/*body {
     background: url(../images/b5.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -84,22 +84,24 @@ body {
     -o-background-size: cover;
     min-height: 100vh;
 }
+*/
 .fb{
-	background: url(../img/bg1.jpg);
+	background-color:#c2cad7
+	/*background: url(../img/bg1.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    min-height: 100vh;
+    min-height: 100vh;*/
 }
 .appointment-w3 {
     background-color:rgba(255, 255, 255, 0.12);
     padding: 40px 40px;
    -webkit-box-shadow: 3px 17px 43px 6px rgba(0,0,0,0.75);
--moz-box-shadow: 3px 17px 43px 6px rgba(0,0,0,0.75);
-box-shadow: 3px 17px 43px 6px rgba(0,0,0,0.75);
+	-moz-box-shadow: 3px 17px 43px 6px rgba(0,0,0,0.75);
+	box-shadow: 3px 17px 43px 6px rgba(0,0,0,0.75);
 }
 h1.header-w3ls {
     text-align: center;
@@ -127,7 +129,7 @@ h1.header-w3ls {
 ,.form-control-w3l textarea,.form-add-w3ls  input[type="password"],.form-add-w3ls input[type="text"]{
     width:500px;
 	padding-left:0px;
-    color: #000;
+    color: #000000;
     outline: none;
     font-size: 20px;
     padding: .8em 1em;
@@ -226,7 +228,7 @@ input[type="button"] {
 }
  
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-     color: #fff;
+     color: #000000;
 }
 ::-moz-placeholder { /* Firefox 19+ */
     color: #fff;
