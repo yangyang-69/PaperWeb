@@ -7,10 +7,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>验证登录</title>
-	<link rel="stylesheet" type="text/css" href="css/TransparentLoginBoxDemo.css">
 </head>
 <body>
-<img src="img/bg5.jpg"/>
 <!-- 实验10 --> 
 <%
 		UserDao userdao = new UserDao();//创建对象
@@ -41,14 +39,10 @@
 		}
 		else{
 			%>
-			<div id="login_id">	
 				<h2>登陆失败，请您<a href="hello.jsp">重新登录</a></h2>	
-			</div>	
+		
 			<%
 		}
 			%>
-<div id="buttom_id">
-		   <h5>版权所有:哈哈哈小组</h5>
-</div>
 </body>
 </html>
