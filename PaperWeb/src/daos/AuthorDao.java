@@ -121,6 +121,26 @@ public class AuthorDao {
 		return AuthorList;
 	}
 	*/
+	//以下为期刊信息输出界面调用方法
+		public  ArrayList<Authors> getAuthors() throws Exception{
+			ArrayList<Authors> AtuthorList = new ArrayList<Authors>();
+			getCon();
+			System.out.println("数据库连接成功");
+			String sql = 
+					"select * from author";
+			PreparedStatement state = conn.prepareStatement(sql);
+			ResultSet rs=state.executeQuery();
+			while(rs.next()){
+				Authors a = new Authors();
+				a.setAuthorName(rs.getString("AuthorName"));
+				a.setOrganization(rs.getString("Organization"));
+				AtuthorList.add(a);
+			}
+			rs.close();
+			state.close();
+			closeCon(conn);
+			return AtuthorList;
+		}
 	//关闭数据库
 	public void closeCon(Connection con)throws Exception{
 		if(con!=null)
