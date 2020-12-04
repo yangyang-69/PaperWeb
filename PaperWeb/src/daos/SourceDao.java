@@ -49,7 +49,9 @@ public class SourceDao {
 		getCon();
 		System.out.println("数据库连接成功");
 		String sql = 
-				"select * from source";
+				"select source.*,COUNT(*) from source,paper " + 
+				"where source.SourceID = paper.SourceID " + 
+				"group by SourceID order by COUNT(*) desc";
 		PreparedStatement state = conn.prepareStatement(sql);
 		ResultSet rs=state.executeQuery();
 		while(rs.next()){
@@ -58,6 +60,7 @@ public class SourceDao {
 			s.setSourcePlace(rs.getString("SourcePlace"));
 			s.setSourceURL(rs.getString("SourceURL"));
 			s.setSourceTel(rs.getString("SourceTel"));
+			s.setCountpaper(rs.getInt("COUNT(*)"));
 			SourceList.add(s);
 		}
 		rs.close();

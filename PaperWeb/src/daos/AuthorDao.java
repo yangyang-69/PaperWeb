@@ -127,13 +127,16 @@ public class AuthorDao {
 			getCon();
 			System.out.println("数据库连接成功");
 			String sql = 
-					"select * from author";
+					"select author.*,COUNT(*) from author,paper " + 
+					"where author.AuthorID = paper.AuthorID " + 
+					"group by AuthorID order by COUNT(*) desc";
 			PreparedStatement state = conn.prepareStatement(sql);
 			ResultSet rs=state.executeQuery();
 			while(rs.next()){
 				Authors a = new Authors();
 				a.setAuthorName(rs.getString("AuthorName"));
 				a.setOrganization(rs.getString("Organization"));
+				a.setCountpaper(rs.getInt("COUNT(*)"));
 				AtuthorList.add(a);
 			}
 			rs.close();

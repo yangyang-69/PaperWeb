@@ -4,6 +4,13 @@ public class Authors {
 	private int AuthorID;
 	private String AuthorName;
 	private String Organization;
+	private int Countpaper;
+	public int getCountpaper() {
+		return Countpaper;
+	}
+	public void setCountpaper(int countpaper) {
+		Countpaper = countpaper;
+	}
 	public int getAuthorID() {
 		return AuthorID;
 	}

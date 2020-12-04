@@ -25,14 +25,14 @@
 		//调用Dao的方法查询数据库
 		if(user.getPassword().equals(password) && user!= null){
 			//判断是否满足条件
-			out.print("登录成功,3秒后跳转");
+			//out.print("登录成功,3秒后跳转");
 			%>
 				<form name="pass_form1" action="index.jsp" method="post" >
 					<input type="hidden" name="UserName" value="<%=UserName%>">
 					<!--<input type="submit" value="提交">  -->
 				</form>
 				<script type="text/javascript">
-					setTimeout("pass_form1.submit();",1000);
+					setTimeout("pass_form1.submit();");
 				</script>
 				<meta http-equiv="refresh" content="3;url=index.jsp">
 			<%

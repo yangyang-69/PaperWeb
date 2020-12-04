@@ -74,6 +74,7 @@
 									 	<th>地址</th>
 									 	<th>网址</th>
 									 	<th>电话</th>
+									 	<th>刊登论文数量</th>
 									 </tr>
 								  </thead>
 								 <c:forEach items="${sourceList}" var="S">
@@ -90,6 +91,9 @@
 								 		</td>
 								 		<td>
 								 			${S.getSourceTel()}	
+								 		</td>
+								 		<td>
+								 			${S.getCountpaper()}	
 								 		</td>
 								 	</tr>
 								 </tbody>

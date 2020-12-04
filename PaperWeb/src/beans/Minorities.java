@@ -4,6 +4,13 @@ public class Minorities {
 	private int MinorityID;
 	private String MinorityName;
 	private String MinorityInfo;
+	private int Count_paper;
+	public int getCount_paper() {
+		return Count_paper;
+	}
+	public void setCount_paper(int count_paper) {
+		Count_paper = count_paper;
+	}
 	public int getMinorityID() {
 		return MinorityID;
 	}
