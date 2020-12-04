@@ -13,6 +13,7 @@
 		<meta name="description" content="论文网-首页">
 		<link rel="stylesheet" href="css/base.css">
 		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/pgzg.css">
 		<script type="text/javascript" src="js/jquery-1.12.1.min.js" ></script>
 		<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js" ></script>
 		<script type="text/javascript" src="js/tab.js" ></script>
@@ -124,8 +125,11 @@
 			</script>
 			</div>
 		</div>
-		<div class="clear"></div>
+
+
+
 		<!--中间内容-->
+		<div class="clear"></div>
 		<div class="w-all">
 			<div class="w-main">
 				<div class="fl conentl">
@@ -151,102 +155,58 @@
 							</div>
 							-->
 						</div>
-						<%
-							/*最新新闻：按时间排列最新发布的论文,显示论文 民族 作者 时间（最右边）*/
-							request.setCharacterEncoding("UTF-8");//保证中文编码
-							PaperDao paperdao1 = new PaperDao();
-							ArrayList<Papers> paperList1 = paperdao1.getPaperPubTimeorder();
-							request.setAttribute("paperList1",paperList1);
-							System.out.println("当前搜索结果"+paperList1);
-						%>
 						<div class="fl newslist">
+							<!--
 							<div class="newsfrtop">
-							
-							<table class="bordered">
-								 <caption>
-								 	<h2></h2>
-								 </caption>
-								 <thead>
-									 <tr bgcolor="#C4E1FF">
-									 	<th>标题</th>
-									 	<th>民族</th>
-									 	<th>作者</th>
-									 	<th>期刊</th>
-									 	<th>时间</th>
-									 </tr>
-								  </thead>
-								 <c:forEach items="${paperList1}" var="P1">
-								 <tbody>
-								 	<tr>
-								 		<td>
-								 			${P1.getTitle()}	
-								 		</td>
-								 		<td>
-								 			${P1.getMinorityName()}	
-								 		</td>							 		
-								 		<td>
-								 			${P1.getAuthorName()}	
-								 		</td>
-								 		<td>
-								 			${P1.getSourceName()}	
-								 		</td>
-								 		<td>
-								 			${P1.getPubTime()}	
-								 		</td>
-								 	</tr>
-								 </tbody>
-								</c:forEach>
-							</table>
-							<!--  -->
-							<!-- 
 								<a href="">
 									<h2 class="fs-14 fl one_hidden">集团工会深入公司进行调研指导工作</h2>
 									<span class="fs-12 fr">2016-12-12</span>
 									<div class="clear"></div>
 									<p class="fs-12 tw_hidden">为了贯彻集团工作要求，深化主题劳动竞赛促进企业发展，推动“点赞医药好职工”活动有序开展……</p>
 								</a>
-							-->
 							</div>
-							<!-- 
-							<ul>
-								<li>
-									<a href="">
-										<h3 class="fs-12 fl one_hidden">· 国药器械50传承活动圆满结束</h3>
-										<span class="fs-12 fr">2016-12-12</span>
-									</a>
-								</li>
-								<li>
-									<a href="">
-										<h3 class="fs-12 fl one_hidden">· 国药器械50传承活动圆满结束</h3>
-										<span class="fs-12 fr">2016-12-12</span>
-									</a>
-								</li>
-								<li>
-									<a href="">
-										<h3 class="fs-12 fl one_hidden">· 国药器械50传承活动圆满结束</h3>
-										<span class="fs-12 fr">2016-12-12</span>
-									</a>
-								</li>
-								<li>
-									<a href="">
-										<h3 class="fs-12 fl one_hidden">· 国药器械50传承活动圆满结束</h3>
-										<span class="fs-12 fr">2016-12-12</span>
-									</a>
-								</li>
-								<li>
-									<a href="">
-										<h3 class="fs-12 fl one_hidden">· 国药器械50传承活动圆满结束</h3>
-										<span class="fs-12 fr">2016-12-12</span>
-									</a>
-								</li>
-								<li>
-									<a href="">
-										<h3 class="fs-12 fl one_hidden">· 国药器械50传承活动圆满结束</h3>
-										<span class="fs-12 fr">2016-12-12</span>
-									</a>
-								</li>
-							</ul>
-							 -->
+							-->
+							<%
+							/*最新新闻：按时间排列最新发布的论文,显示论文 民族 作者 时间（最右边）*/
+							request.setCharacterEncoding("UTF-8");//保证中文编码
+							PaperDao paperdao1 = new PaperDao();
+							ArrayList<Papers> paperList1 = paperdao1.getPaperPubTimeorder();
+							request.setAttribute("paperList1",paperList1);
+							System.out.println("当前搜索结果"+paperList1);
+							%>
+							<table class="table-1">
+									 <thead>
+									 <tr>
+									 
+										 	<th>标题</th>
+										 	<th>民族</th>
+										 	<th>作者</th>
+										 	<th>期刊</th>
+										 	<th>时间</th>
+									</tr>
+									  </thead>
+									 <c:forEach items="${paperList1}" var="P1">
+									 <tbody>
+									 	<tr>
+									 		<td>
+									 			${P1.getTitle()}	
+									 		</td>
+									 		<td>
+									 			${P1.getMinorityName()}	
+									 		</td>							 		
+									 		<td>
+									 			${P1.getAuthorName()}	
+									 		</td>
+									 		<td>
+									 			${P1.getSourceName()}	
+									 		</td>
+									 		<td>
+									 			${P1.getPubTime()}	
+									 		</td>
+									 	</tr>
+									 </tbody>
+									</c:forEach>
+								</table>
 						</div>
 					</div>
 				</div>
@@ -255,7 +215,6 @@
 						<img  src="img/redainlogo.png" alt=""/>
 						<span class="fs-16">最热论文排行榜</span>
 					</div>
-					<!--  -->
 					<%
 						/*最热论文：,下载次数最多的论文,论文名 民族（或者作者） 下载次数*/
 						request.setCharacterEncoding("UTF-8");//保证中文编码
@@ -270,13 +229,10 @@
 					<a href=""><img src="img/redian04.png" alt="" /></a>
 					*/
 					%>
-
-					<table class="bordered">
-								 <caption>
-								 	<h2></h2>
-								 </caption>
+					
+					<table class="table-1">
 								 <thead>
-									 <tr bgcolor="#C4E1FF">
+									 <tr>
 									 	<th>标题</th>
 									 	<th>下载次数</th>
 									 </tr>
@@ -293,58 +249,23 @@
 								 	</tr>
 								 </tbody>
 								</c:forEach>
-							</table>
-				</div>
+					</table>
+				</div>  
 				<div class="fl wtongy"></div>
 				<div class="fr massges1 ">
 					<div class="massgtop1 zixu">
 						<img  src="img/redainlogo.png" alt=""/>
 						<span class="fs-16">最热期刊排行榜</span>
 					</div>
-					<!--  -->
 					<%
 						SourceDao sourcedao = new SourceDao();
 						ArrayList<Sources> sourceList = sourcedao.gethotSources();
 						request.setAttribute("sourceList",sourceList);
 						System.out.println("当前搜索结果"+sourceList);
 					%>
-					<%
-					/*
-					<ul>
-						<li>
-							<a href="">
-									<h3 class="fs-12 fl one_hidden">国药器械50传承活动圆满结束</h3>
-									<span class="fs-12 fr">2016-12-12</span>
-								</a>
-						</li>
-						<li>
-							<a href="">
-									<h3 class="fs-12 fl one_hidden">国药器械50传承活动圆满结束</h3>
-									<span class="fs-12 fr">2016-12-12</span>
-								</a>
-						</li>
-						<li>
-							<a href="">
-									<h3 class="fs-12 fl one_hidden">国药器械50传承活动圆满结束</h3>
-									<span class="fs-12 fr">2016-12-12</span>
-								</a>
-						</li>
-						<li>
-							<a href="">
-									<h3 class="fs-12 fl one_hidden">国药器械50传承活动圆满结束</h3>
-									<span class="fs-12 fr">2016-12-12</span>
-								</a>
-						</li>
-					</ul>
-					*/
-					 %>
-					 
-					<table class="bordered">
-								 <caption>
-								 	<h2></h2>
-								 </caption>
+					<table class="table-1">
 								 <thead>
-									 <tr bgcolor="#C4E1FF">
+									 <tr>
 									 	<th>期刊</th>
 									 	<th>发表论文个数</th>
 									 </tr>
@@ -361,10 +282,11 @@
 								 	</tr>
 								 </tbody>
 								</c:forEach>
-							</table>
+					</table>
 				</div>
 			</div>
 			</div>
+		
 		<div class="clear"></div>
 		<div class="w-all banquan">
 			<p>版权所有    哈哈哈小组</p>
