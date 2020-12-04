@@ -146,6 +146,9 @@
 							<div class="newsimg">
 								<a href=""><img src="img/contnew2.png" alt=""></a>
 							</div>
+							<div class="newsimg">
+								<a href=""><img src="img/contnew3.png" alt=""></a>
+							</div>
 							<!--  
 							<div class="newsbott">
 								<a href="">
@@ -156,16 +159,7 @@
 							-->
 						</div>
 						<div class="fl newslist">
-							<!--
-							<div class="newsfrtop">
-								<a href="">
-									<h2 class="fs-14 fl one_hidden">集团工会深入公司进行调研指导工作</h2>
-									<span class="fs-12 fr">2016-12-12</span>
-									<div class="clear"></div>
-									<p class="fs-12 tw_hidden">为了贯彻集团工作要求，深化主题劳动竞赛促进企业发展，推动“点赞医药好职工”活动有序开展……</p>
-								</a>
-							</div>
-							-->
+							
 							<%
 							/*最新新闻：按时间排列最新发布的论文,显示论文 民族 作者 时间（最右边）*/
 							request.setCharacterEncoding("UTF-8");//保证中文编码
@@ -207,6 +201,7 @@
 									 </tbody>
 									</c:forEach>
 								</table>
+						
 						</div>
 					</div>
 				</div>
@@ -230,7 +225,7 @@
 					*/
 					%>
 					
-					<table class="table-1">
+					<table class="table-2">
 								 <thead>
 									 <tr>
 									 	<th>标题</th>
@@ -250,8 +245,8 @@
 								 </tbody>
 								</c:forEach>
 					</table>
-				</div>  
-				<div class="fl wtongy"></div>
+				</div>
+				
 				<div class="fr massges1 ">
 					<div class="massgtop1 zixu">
 						<img  src="img/redainlogo.png" alt=""/>
@@ -263,7 +258,7 @@
 						request.setAttribute("sourceList",sourceList);
 						System.out.println("当前搜索结果"+sourceList);
 					%>
-					<table class="table-1">
+					<table class="table-3">
 								 <thead>
 									 <tr>
 									 	<th>期刊</th>

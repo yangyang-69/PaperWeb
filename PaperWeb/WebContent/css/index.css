@@ -67,7 +67,7 @@
 
 
 	
-.massges1{padding-top:10px;}
+.massges1{margin-top:10px;}
 .zixu{background-color: #7694d6;width: 350px;}
 .massgtop1{width: 350px;height: 43px;line-height: 43px;position: relative;}
 .massgtop1 img{position: absolute;top: 10px;left: 20px;}
@@ -95,12 +95,6 @@
 .lanren li a{font-size: 12px;color: #010101;line-height: 50px;display: inline-block;}
 .lanren li a:hover{color: #7694d6;}
 
-.table-1{
-	width:100%;
-
-
-
-}
 
 .table-1 thead th{
 	background-color:#e7dfcf
@@ -126,6 +120,64 @@ border-color: #4c525f
 
 	
 }
+
+.table-2{
+	width: 350px;
+}
+.table-2 thead th{
+	background-color:#e7dfcf
+}
+.table-2 th{
+padding: 5px 10px;
+font-size: 12px;
+font-family: Verdana;
+font-weight: bold;
+border-width: 1px;
+border-style: solid;
+border-color: #4c525f
+
+	
+}
+.table-2 td{
+padding: 5px 10px;
+font-size: 12px;
+font-family: Verdana;
+border-width: 1px;
+border-style: solid;
+border-color: #4c525f
+
+	
+}
+.table-3{
+	width: 350px;
+}
+
+.table-3 thead th{
+	background-color:#e7dfcf
+}
+.table-3 th{
+padding: 5px 10px;
+font-size: 12px;
+font-family: Verdana;
+font-weight: bold;
+border-width: 1px;
+border-style: solid;
+border-color: #4c525f
+
+	
+}
+.table-3 td{
+padding: 5px 10px;
+font-size: 12px;
+font-family: Verdana;
+border-width: 1px;
+border-style: solid;
+border-color: #4c525f
+
+	
+}
+
+
 
 
 
