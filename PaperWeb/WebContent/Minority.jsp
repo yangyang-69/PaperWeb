@@ -78,6 +78,7 @@
 									 <tr bgcolor="#C4E1FF">
 									 	<th>民族名称</th>
 									 	<th>民族简介</th>
+									 	<th>论文统计数量</th>
 									 </tr>
 								  </thead>
 								 <c:forEach items="${minorityList}" var="M">
@@ -88,6 +89,9 @@
 								 		</td>
 								 		<td>
 								 			${M.getMinorityInfo()}
+								 		</td>
+								 		<td>
+								 			${M.getCount_paper()}
 								 		</td>
 								 	</tr>
 								 </tbody>

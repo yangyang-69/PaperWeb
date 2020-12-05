@@ -27,15 +27,17 @@ public class MinorityDao {
 		ArrayList<Minorities> MinorityList=new ArrayList<Minorities>();
 		getCon();
 		System.out.println("数据库连接成功");
-		String sql = "select MinorityID,MinorityName,MinorityInfo FROM minority";
+		String sql = "SELECT minority.*,COUNT(*) FROM minority,paper " + 
+				"where minority.MinorityID = paper.MinorityID " + 
+				"group by MinorityID order by COUNT(*) desc";
 		PreparedStatement state = conn.prepareStatement(sql);
 		ResultSet rs=state.executeQuery();
 		while(rs.next()){
 			Minorities M=new Minorities();
 			M.setMinorityID(rs.getInt("MinorityID"));
-			System.out.println(rs.getInt("MinorityID"));
 			M.setMinorityName(rs.getString("MinorityName"));
 			M.setMinorityInfo(rs.getString("MinorityInfo"));
+			M.setCount_paper(rs.getInt("COUNT(*)"));
 			MinorityList.add(M);
 		}
 		rs.close();

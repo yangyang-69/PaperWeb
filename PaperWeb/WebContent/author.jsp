@@ -72,6 +72,7 @@
 									 <tr bgcolor="#C4E1FF">
 									 	<th>作者</th>
 									 	<th>单位</th>
+									 	<th>发表论文数量</th>
 									 </tr>
 								  </thead>
 								 <c:forEach items="${authorList}" var="A">
@@ -82,6 +83,9 @@
 								 		</td>
 								 		<td>
 								 			${A.getOrganization()}	
+								 		</td>
+								 		<td>
+								 			${A.getCountpaper()}	
 								 		</td>
 								 	</tr>
 								 </tbody>

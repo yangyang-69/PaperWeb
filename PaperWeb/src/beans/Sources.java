@@ -7,8 +7,15 @@ public class Sources {
 	private String SourceURL;
 	private String SourceTel;
 	private int CountDownloaded;
+	private int Countpaper;
 	public int getCountDownloaded() {
 		return CountDownloaded;
+	}
+	public int getCountpaper() {
+		return Countpaper;
+	}
+	public void setCountpaper(int countpaper) {
+		Countpaper = countpaper;
 	}
 	public void setCountDownloaded(int countDownloaded) {
 		CountDownloaded = countDownloaded;
