@@ -32,15 +32,18 @@
 					<!--<input type="submit" value="提交">  -->
 				</form>
 				<script type="text/javascript">
+					alert("登录成功");
 					setTimeout("pass_form1.submit();");
 				</script>
-				<meta http-equiv="refresh" content="3;url=index.jsp">
+				<meta http-equiv="refresh" content="1.5;url=index.jsp">
 			<%
 		}
 		else{
 			%>
-				<h2>登陆失败，请您<a href="hello.jsp">重新登录</a></h2>	
-		
+				<script type="text/javascript">
+					alert("登录失败，请重新登录");
+				</script>
+				<meta http-equiv="refresh" content="0.5;url=hello.jsp">
 			<%
 		}
 			%>
