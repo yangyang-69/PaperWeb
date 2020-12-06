@@ -79,7 +79,7 @@
 			<div class="w-main">
 				<div class="goodsxxfr fr">
 					<div class="nagelj">
-						当前位置：<a href="">首页></a>
+						当前位置：<a href="index.jsp">首页></a>
 						<a href="">论文发表></a>
 					</div>
 				</div>

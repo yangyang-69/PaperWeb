@@ -41,6 +41,16 @@
 </head>
 <body>
 		<div class="fb">
+			<div class="copy">
+				<p></p>
+			</div>
+			<div class="copy">
+				<p></p>
+			</div>
+			<div class="copy">
+				<p></p>
+			</div>
+			
 			<h1 class="header-w3ls">
 				中国民族论文信息网
 			</h1>
@@ -64,15 +74,24 @@
 			    <form id="login_form1" name="form2" action="register.jsp" method="post">
 			    	<div class="btnn">
 							<input type ="submit" class="loginbtn" value="注册">
-							</br>
+							<div class="copy">
+								<p></p>
+							</div>
 							<nobr id="zh">没有账号？</nobr>
 					</div>
 				</form>
 			</div>
 			<div class="copy">
-			<p></p>
+				<p></p>
 			</div>
-		
+			<div class="copy">
+				<p></p>
+			</div>
+			<div class="copy">
+				<p></p>
+			</div>	
+	</div>
+
 		<div class="clear"></div>
 		<div class="w-all banquan">
 			<p>版权所有    哈哈哈小组</p>
@@ -93,6 +112,6 @@
 
 	
 	
-	</div>
+	
 </body>
 </html>

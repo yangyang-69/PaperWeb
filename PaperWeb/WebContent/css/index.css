@@ -110,6 +110,9 @@ border-color: #4c525f
 
 	
 }
+.table-1{
+	padding-top:10px;
+}
 .table-1 td{
 padding: 5px 10px;
 font-size: 12px;

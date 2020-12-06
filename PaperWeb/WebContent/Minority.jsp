@@ -34,7 +34,7 @@
 			<div class="w-main">
 				<ul>
 					<li>
-						<a href="index.jap">首页</a>
+						<a href="index.jsp">首页</a>
 					</li>
 					<li class="on">
 						<a href="">民族知识投递</a>
@@ -61,7 +61,7 @@
 			<div class="w-main">
 				<div class="goodsxxfr fr">
 					<div class="nagelj">
-						当前位置：<a href="">首页></a>
+						当前位置：<a href="index.jsp">首页></a>
 						<a href="">民族知识投递></a>
 					</div>
 				</div>
