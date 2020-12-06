@@ -177,7 +177,7 @@ public class PaperDao {
 				"select Title,MinorityName,AuthorName,Downloaded from paper,minority,author " + 
 				"where (paper.MinorityID = minority.MinorityID " + 
 				"and paper.AuthorID = author.AuthorID) " + 
-				"ORDER BY Downloaded desc limit 5";
+				"ORDER BY Downloaded desc limit 9";
 		PreparedStatement state = conn.prepareStatement(sql);
 		ResultSet rs=state.executeQuery();
 		while(rs.next()){
