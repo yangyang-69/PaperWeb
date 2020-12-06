@@ -1,8 +1,8 @@
 @charset "utf-8";
 /*产品中心*/
 .bannertu{width: 100%;height: 260px;}
-.nagelj{margin-top: 10px;margin-bottom: 10px;line-height: 15px;border-bottom: solid #d2d2d2 1px;color: #000;font-size: 16px;width: 100%;text-align: right;}
-.nagelj a{color: #000;}
+.nagelj{margin-top: 15px;margin-bottom: 15px;line-height: 17px;border-bottom: solid #d2d2d2 1px;color: #000;font-size: 18px;width: 100%;text-align: right;}
+.nagelj a{color: #3e5e7a;}
 .biaoge { padding: 10px 150px; }  /* padding定义内边距 */
 #wrap {
     width: 900px;
@@ -48,7 +48,7 @@ table {
     background-image: -ms-linear-gradient(top, #ebf3fc, #dce9f9);
     background-image: -o-linear-gradient(top, #ebf3fc, #dce9f9);
     background-image: linear-gradient(top, #ebf3fc, #dce9f9);
- filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#ebf3fc, endColorstr=#dce9f9);
+ 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#ebf3fc, endColorstr=#dce9f9);
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#ebf3fc, endColorstr=#dce9f9)";
     -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
     -moz-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;

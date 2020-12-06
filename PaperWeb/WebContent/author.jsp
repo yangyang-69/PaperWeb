@@ -53,7 +53,7 @@
 			<div class="w-main">
 				<div class="goodsxxfl fr">
 					<div class="nagelj">
-						当前位置：<a href="">首页></a>
+						当前位置：<a href="index.jsp">首页></a>
 						<a href="">作者简介></a>
 					</div>
 				</div>
