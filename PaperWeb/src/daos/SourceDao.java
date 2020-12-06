@@ -76,7 +76,7 @@ public class SourceDao {
 				"select SourceName,COUNT(SourceName) " + 
 				"from source,paper " + 
 				"where source.SourceID = paper.SourceID " + 
-				"GROUP BY SourceName order by COUNT(SourceName) desc limit 5";
+				"GROUP BY SourceName order by COUNT(SourceName) desc limit 9";
 		PreparedStatement state = conn.prepareStatement(sql);
 		ResultSet rs=state.executeQuery();
 		while(rs.next()){

@@ -23,7 +23,10 @@
 		//out.print("注册成功"+UserName);
 %>
 
-		    <h2>注册成功，请您<a href="hello.jsp">返回登录</a> </h2>
+		    <script type="text/javascript">
+					alert("注册成功");
+				</script>
+			<meta http-equiv="refresh" content="0.5;url=hello.jsp">
 	
 		
 </body>
