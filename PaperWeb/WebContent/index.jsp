@@ -166,7 +166,7 @@
 							PaperDao paperdao1 = new PaperDao();
 							ArrayList<Papers> paperList1 = paperdao1.getPaperPubTimeorder();
 							request.setAttribute("paperList1",paperList1);
-							System.out.println("当前搜索结果"+paperList1);
+							//System.out.println("当前搜索结果"+paperList1);
 							%>
 							<table class="table-1">
 									 <thead>
@@ -216,7 +216,7 @@
 						PaperDao paperdao = new PaperDao();
 						ArrayList<Papers> paperList = paperdao.gethotPapers();
 						request.setAttribute("paperList",paperList);
-						System.out.println("当前搜索结果"+paperList);
+						//System.out.println("当前搜索结果"+paperList);
 					/*
 					<a href=""><img src="img/redian01.png" alt="" /></a><br />
 					<a href=""><img src="img/redian02.png" alt="" /></a><br />
@@ -256,7 +256,7 @@
 						SourceDao sourcedao = new SourceDao();
 						ArrayList<Sources> sourceList = sourcedao.gethotSources();
 						request.setAttribute("sourceList",sourceList);
-						System.out.println("当前搜索结果"+sourceList);
+						//System.out.println("当前搜索结果"+sourceList);
 					%>
 					<table class="table-3">
 								 <thead>
