@@ -129,8 +129,6 @@
 		</div>
 		
 			
-		<div class="clear"></div>
-		<div class="h-30"></div>
 		<!--footer-->
 		<div class="clear"></div>
 		<div class="w-all banquan">
